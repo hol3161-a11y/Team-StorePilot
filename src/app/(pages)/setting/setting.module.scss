@@ -1,0 +1,466 @@
+.setting {
+    width: 1260px;
+    margin: 0 auto;
+    font-family: 'PyeojinGothic';
+
+    position: relative;
+
+
+    .inner {
+        width: 100%;
+
+        >h1 {
+            margin-top: 100px;
+            font-size: 40px;
+        }
+
+        .account {
+            >h2 {
+                margin-top: 80px;
+                margin-bottom: 10px;
+                margin-left: 9px;
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+            .accountGrid {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(240px, 380px);
+                gap: 50px;
+
+
+                .profileCard {
+                    background-color: #1F2022;
+                    border-radius: 11px;
+                    border: 1px solid #2D2C2F;
+                    height: 80px;
+                    position: relative;
+
+                    display: flex;
+                    align-items: center;
+
+                    .profileIcon {
+                        display: flex;
+                        align-items: center;
+                        gap: 22px;
+
+                        >p {
+                            margin-left: 24px;
+                        }
+
+                        .profileText {
+                            >strong {
+                                font-weight: 700;
+                                font-size: 18px;
+                                margin-bottom: 5px;
+                                display: block;
+                            }
+
+                            >p {
+                                font-weight: 400;
+                                font-size: 14px;
+                            }
+                        }
+
+                    }
+
+                    .moreBtn {
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        border: 0;
+                        background-color: transparent;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+
+                .loginCard {
+                    background-color: #1F2022;
+                    border-radius: 11px;
+                    border: 1px solid #2D2C2F;
+                    height: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 24px;
+                    gap: 12px;
+
+                    >span {
+                        font-size: 12px;
+                        font-weight: 700;
+                    }
+
+                    .loginType {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        >p {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        .storeInfo {
+            >h2 {
+                margin-bottom: 10px;
+                margin-left: 9px;
+                margin-top: 42px;
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+            .infoList {
+                display: flex;
+                flex-direction: column;
+                gap: 17px;
+
+                span {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+
+                input {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+
+                .infoName,
+                .infoAdd {
+                    padding-left: 24px;
+                    background-color: #1F2022;
+                    border-radius: 11px;
+                    border: 1px solid #2D2C2F;
+                    display: flex;
+                    flex-direction: column;
+                    height: 80px;
+                    justify-content: center;
+                    gap: 10px;
+
+                    input {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+
+                        border: none;
+                        background: none;
+                        outline: none;
+
+                        padding: 0;
+                        margin: 0;
+                        font: inherit;
+                        color: inherit;
+                    }
+                }
+
+                .infoName.modify,
+                .infoAdd.modify {
+                    border-color: #2D2C2F;
+                    background-color: #262728;
+
+                    input {
+                        width: 100%;
+                        border: 0;
+                        background: transparent;
+                        padding: 0;
+                    }
+                }
+
+                .infoName.modify:focus-within,
+                .infoAdd.modify:focus-within {
+                    border-color: #76DE99;
+                }
+
+
+                .infoAdd {
+                    background-color: #1F2022;
+                    border-radius: 11px;
+                    border: 1px solid #2D2C2F;
+                }
+
+
+                .infoName {}
+            }
+
+        }
+
+        .actionArea {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 21px;
+            font-size: 14px;
+            font-weight: 500;
+
+            button {
+                min-width: 66px;
+                height: 38px;
+                border: 0;
+                border-radius: 11px;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            .cancelBtn {
+                background-color: #DBE2DD;
+            }
+
+            .cancelBtn:hover {
+                background-color: #BEC7C0;
+            }
+
+            .submitBtn {
+                margin-left: 8px;
+                background-color: #76DE99;
+            }
+
+            .submitBtn:hover {
+                background-color: #68C989;
+            }
+        }
+
+        .dangerArea {
+            margin-top: 80px;
+
+            button {
+                border: 0;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 13px;
+                cursor: pointer;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .logoutBtn {
+                color: #fff;
+                margin-bottom: 14px;
+
+            }
+
+            .logoutBtn:hover {
+                color: #d1d1d1;
+
+            }
+
+
+            .deleteBtn {
+                color: #FF6161;
+            }
+
+            .deleteBtn:hover {
+                color: #bd4646;
+            }
+
+            .deleteBtn,
+            .logoutBtn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+    }
+
+    .popupWrap {
+        position: absolute;
+        inset: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #17181B;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 1;
+
+        .resetBox {
+            width: 456px;
+
+            >h1 {
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            >p {
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: 16px;
+            }
+
+            .pwd {
+                margin: 72px 0;
+
+                .inputGroup {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    input {
+                        padding-left: 24px;
+                        background-color: #1F2022;
+                        border-radius: 11px;
+                        border: 1px solid #2D2C2F;
+                        height: 60px;
+                        outline: none;
+                        color: white;
+
+                    }
+
+                    input:focus {
+                        border-color: #6FDB95;
+                    }
+
+                    .passwordCheck {
+                        margin-top: 32px;
+                    }
+
+                }
+            }
+
+            .buttonWrap {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    min-width: 66px;
+                    height: 38px;
+                    border: 0;
+                    border-radius: 11px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+
+                .cancelBtn {
+                    background-color: #DBE2DD;
+                }
+
+                .cancelBtn:hover {
+                    background-color: #BEC7C0;
+                }
+
+                .submitBtn {
+                    margin-left: 8px;
+                    background-color: #76DE99;
+                }
+
+                .submitBtn:hover {
+                    background-color: #68C989;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .setting {
+        width: 90%;
+
+        .popupWrap {
+            .resetBox {
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .inner {
+
+            .content {
+
+                .account {
+
+                    .accountGrid {
+                        grid-template-columns: 6fr 4fr;
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .setting {
+
+
+        .inner {
+            >h1 {
+                font-size: 30px;
+                margin-top: 70px;
+            }
+
+            .content {
+
+                .account {
+
+                    .accountGrid {
+                        display: block;
+
+                        .profileCard {
+                            .profileIcon {
+                                gap: 10px;
+
+                                >p {
+                                    margin-left: 16px;
+                                }
+
+                                .profileText {
+                                    >strong {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+
+                            .moreBtn {
+                                top: 5px;
+                                right: 0;
+                            }
+                        }
+                    }
+
+                    .loginCard {
+                        margin-top: 17px;
+                        padding-left: 16px
+                    }
+                }
+            }
+
+            .dangerArea {
+                margin-top: 40px;
+            }
+
+            .storeInfo {
+                .infoList {
+
+                    font-size: 15px;
+
+                    .infoName,
+                    .infoAdd {
+                        padding-left: 16px;
+
+                    }
+
+                }
+            }
+        }
+    }
+}

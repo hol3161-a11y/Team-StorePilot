@@ -1,0 +1,335 @@
+@use '../../../../styles/variables' as *;
+
+
+
+.container {
+    @include container;
+    flex-direction: column;
+    width: 90%;
+    max-width: 720px;
+    .check {
+        margin: 0 auto;
+        width: 160px;
+        height: 160px;
+        position: relative;
+
+        .checkSvg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .checkCircle {
+            fill: transparent;
+            stroke: $point;
+            stroke-width: 4;
+            stroke-dasharray: 289;
+            stroke-dashoffset: 289;
+            transform-origin: center;
+            transform: rotate(-90deg);
+            animation:
+                drawCircle 0.7s ease-out forwards,
+                fillCircle 0.35s 0.6s ease-out forwards;
+        }
+
+        .checkMark {
+            fill: none;
+            stroke: $background;
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 70;
+            stroke-dashoffset: 70;
+            animation: drawCheck 0.5s 0.85s ease-out forwards;
+        }
+    }
+
+    @keyframes drawCircle {
+        to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes fillCircle {
+        from { fill: transparent; }
+        to   { fill: $point; }
+    }
+
+    @keyframes drawCheck {
+        to { stroke-dashoffset: 0; }
+    }
+    
+    .completeText{
+        gap: 3px;
+        h1{
+            font-size: 54px;
+        }
+        span{
+            font-size: 24px;
+        }
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        padding: 50px 0;
+    }
+    .divider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+
+        .dividerLine {
+            display: block;
+            flex: 1;
+            height: 1px;
+            background: $grey3;
+        }
+
+        .dividerText {
+            font-size: 16px;
+            color: $grey3;
+        }
+    }
+
+    .featureList{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0;
+        .featureCard{
+            width: 218px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: $box;
+            border: 1px solid $click-border;
+            border-radius: 10px;
+            padding: 20px 30px;
+            gap:10px;
+            word-break: keep-all;
+            overflow-wrap: break-word;
+
+            img {
+                width: 38px;
+                height: 38px;
+                padding: 7px;
+                box-sizing: border-box;
+                background-color: rgba(82, 129, 97, 0.55);
+                border-radius: 7px;
+            }
+
+            .inventoryIcon {
+                display: block;
+                width: 38px;
+                height: 38px;
+                background-color: rgba(82, 129, 97, 0.55);
+                border-radius: 7px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    inset: 7px;
+                    background-color: $point;
+                    -webkit-mask: url(/img/icon/inventory.svg) no-repeat center / contain;
+                    mask: url(/img/icon/inventory.svg) no-repeat center / contain;
+                }
+            }
+        }
+    }
+
+    .actionGroup {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 290px;
+        height: 60px;
+        background-color: $point;
+        color: $background;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: inherit;
+        line-height: 1;
+        cursor: pointer;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 1023px) {
+        .check {
+            width: 140px;
+            height: 140px;
+        }
+
+        .completeText {
+            padding: 40px 0;
+
+            h1 {
+                font-size: 44px;
+            }
+
+            span {
+                font-size: 20px;
+            }
+        }
+
+        .divider {
+            gap: 24px;
+        }
+
+        .featureList {
+            padding: 40px 0;
+            gap: 14px;
+
+            .featureCard {
+                flex: 1;
+                width: auto;
+                padding: 18px 20px;
+            }
+        }
+
+        .actionGroup {
+            gap: 30px;
+        }
+
+        .primaryButton,
+        .secondaryButton {
+            width: 240px;
+            height: 56px;
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .check {
+            width: 120px;
+            height: 120px;
+        }
+
+        .completeText {
+            padding: 30px 0;
+
+            h1 {
+                font-size: 32px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .divider {
+            gap: 16px;
+
+            .dividerText {
+                font-size: 14px;
+            }
+        }
+
+        .featureList {
+            padding: 30px 0;
+            gap: 10px;
+
+            .featureCard {
+                padding: 14px 12px;
+            }
+        }
+
+        .actionGroup {
+            gap: 16px;
+        }
+
+        .primaryButton,
+        .secondaryButton {
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 610px) {
+        .featureList {
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+
+            .featureCard {
+                width: 100%;
+                max-width: 380px;
+                flex: initial;
+                padding: 18px 22px;
+            }
+        }
+
+        .actionGroup {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .primaryButton,
+        .secondaryButton {
+            flex: initial;
+            width: 100%;
+            max-width: 380px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .check {
+            width: 100px;
+            height: 100px;
+        }
+
+        .completeText {
+            padding: 32px 0;
+            gap: 8px;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .featureList {
+            flex-direction: column;
+            align-items: center;
+            padding: 32px 0;
+            gap: 18px;
+
+            .featureCard {
+                width: 100%;
+                max-width: 280px;
+                flex: initial;
+                padding: 20px 22px;
+                gap: 14px;
+            }
+        }
+
+        .actionGroup {
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .primaryButton,
+        .secondaryButton {
+            width: 100%;
+            max-width: 280px;
+            height: 50px;
+            font-size: 15px;
+        }
+    }
+}

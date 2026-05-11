@@ -1,0 +1,12 @@
+.authWrap {
+  width: 100%;
+
+  @media (max-width: 1023px) {
+    width: 100vw;
+    margin-left: 360px;
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 280px;
+  }
+}

@@ -1,0 +1,381 @@
+.dashboard {
+    width: 1260px;
+    margin: 0 auto;
+    font-family: 'PyeojinGothic';
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 73px;
+
+        position: relative;
+
+        .backBtn {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 30;
+
+            img {
+                transition: transform 0.2s ease;
+            }
+
+            &:hover img {
+                transform: scale(0.9);
+            }
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+
+            >h1 {
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            .dateWrap {
+                >p {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .cardWrap {
+            display: flex;
+            gap: 5%;
+
+            .summaryCard {
+                width: 100%;
+                height: auto;
+                background-color: #26272A;
+                border-radius: 9px;
+                padding: 46px 0;
+                position: relative;
+                min-height: 140px;
+                border: 1px solid transparent;
+                transition: 0.2s;
+
+                .summaryInner {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    >p {
+                        position: absolute;
+                        right: 16px;
+                        top: 16px;
+
+                    }
+
+                    .summaryText {
+                        padding-left: 40px;
+                        padding-right: 40px;
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 400;
+                            margin-bottom: 12px;
+                        }
+
+                        strong {
+
+                            font-size: 28px;
+                            font-weight: 700;
+                        }
+                    }
+
+
+                }
+
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 6px;
+                    height: 100%;
+                    background: linear-gradient(180deg, #76DE99);
+                    border-radius: 12px 0 0 12px;
+                    z-index: 10;
+                }
+
+                &.caution::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 6px;
+                    height: 100%;
+                    background: linear-gradient(180deg, #FFBD07);
+                    border-radius: 12px 0 0 12px;
+                    z-index: 10;
+                }
+
+                &.danger::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 6px;
+                    height: 100%;
+                    background: linear-gradient(180deg, #F34C4C);
+                    border-radius: 12px 0 0 12px;
+                    z-index: 10;
+                }
+            }
+        }
+
+
+        .chartSection {
+            >h2 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+        }
+
+        .infoList {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 100px;
+
+
+            .infoCard {
+                border: 1px solid transparent;
+                width: 100%;
+                background-color: #26272A;
+                border-radius: 11px;
+                transition: 0.2s;
+
+                .cardTitle {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    padding-top: 34px;
+                    justify-content: space-between;
+
+                    >h3 {
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                }
+
+                ul {
+                    padding-left: 38px;
+                    padding-bottom: 52px;
+                    padding-top: 52px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 23px;
+                }
+
+                li {
+                    position: relative;
+                    padding-left: 20px;
+                    font-size: 16px;
+                    font-weight: 400;
+
+                }
+
+                li::before {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background: #76DE99;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 7px;
+                }
+            }
+        }
+
+        .aiBox {
+
+            background-color: #26272A;
+            border-radius: 11px;
+            margin-bottom: 100px;
+            width: 100%;
+            transition: 0.2s;
+
+            .aiTitle {
+                display: flex;
+                align-items: center;
+                padding-left: 29px;
+                padding-top: 48px;
+
+                >h2 {
+                    font-size: 24px;
+                    margin-left: 14px;
+                }
+            }
+
+            .aiContent {
+                padding-bottom: 48px;
+                padding-left: 46px;
+                margin-top: 38px;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+
+        .summaryCard:hover,
+        .infoCard:hover {
+            border: 1px solid #76DE99;
+        }
+
+        .summaryCard.caution:hover {
+            border: 1px solid #FFBD07;
+        }
+
+        .summaryCard.danger:hover {
+            border: 1px solid #F34C4C;
+        }
+
+        .aiBox:hover {
+            background: #232426; // 아주 미세하게
+        }
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .dashboard {
+        width: 90%;
+
+        .inner {
+            .cardWrap {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+
+                .summaryCard {
+                    width: 100%;
+                    height: 140px;
+                    padding: 32px 0;
+
+                    .summaryInner {
+                        height: 100%;
+
+                        .summaryText {
+                            padding-left: 28px;
+                            padding-right: 28px;
+
+                            strong {
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .backBtn {
+                top: 14px;
+            }
+
+            .infoList {
+                gap: 30px;
+
+                .infoCard {
+                    .cardTitle {
+                        >h3 {
+
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .dashboard {
+        width: 90%;
+
+        .inner {
+
+            .top {
+                margin-top: 70px;
+
+                >h1 {
+                    font-size: 30px;
+                }
+
+                .dateWrap {
+                    >p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .backBtn {
+                top: 14px;
+            }
+
+            .cardWrap {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+
+                .summaryCard {
+                    width: 100%;
+                    height: 140px;
+                    padding: 32px 0;
+
+                    .summaryInner {
+                        height: 100%;
+
+                        .summaryText {
+                            padding-left: 28px;
+                            padding-right: 28px;
+
+                            strong {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .infoList {
+                gap: 30px;
+                flex-direction: column;
+
+                .infoCard {
+                    .cardTitle {
+                        >h3 {
+
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+
+
+            .aiBox {
+                .aiTitle {
+                    >h2 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+    }
+}

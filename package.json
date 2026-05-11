@@ -1,0 +1,39 @@
+{
+  "name": "storepilot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@google/generative-ai": "^0.24.1",
+    "@mui/icons-material": "^9.0.0",
+    "@mui/material": "^9.0.0",
+    "@nivo/core": "^0.99.0",
+    "@nivo/line": "^0.99.0",
+    "axios": "^1.15.2",
+    "bcrypt": "^6.0.0",
+    "mongodb": "^7.2.0",
+    "mongoose": "^9.6.1",
+    "next": "16.2.4",
+    "next-auth": "^4.24.14",
+    "openai": "^6.34.0",
+    "react": "19.2.4",
+    "react-daum-postcode": "^4.0.0",
+    "react-dom": "19.2.4",
+    "sass": "^1.99.0",
+    "scss": "^0.2.4",
+    "typeit-react": "^2.7.8",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4"
+  }
+}

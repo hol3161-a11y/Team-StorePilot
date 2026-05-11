@@ -1,0 +1,173 @@
+/* ================== Layout ================== */
+.schedule {
+  margin: 100px auto 0;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.container {
+  display: flex;
+  gap: 26px;
+}
+
+.scheduleMain {
+  flex: 1;
+  width: 100%;
+}
+
+/* ================== Header ================== */
+.scheduleHeader h2 {
+  font-size: 2.5rem;
+}
+.scheduleHeader .scheduleTitle {
+  color: #76DE99;
+}
+
+.total {
+  display: flex;
+  align-items: flex-end;
+  color: #766F6F;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+.total p {
+  padding-left: 5px;
+}
+.total img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ================== Panel ================== */
+.schedulePanel {
+  margin: 35px auto 0;
+  background-color: #1F2022;
+  border: 1px solid #2D2C2F;
+  border-radius: 11px;
+  overflow-x: hidden;
+}
+
+/* ================== Navigation ================== */
+.scheduleNav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #262729;
+  border-bottom: 1px solid #2D2C2F;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  padding: 24px 40px;
+}
+.scheduleNav b {
+  font-size: 1.7rem;
+}
+
+.scheduleNavArrow img {
+  padding-right: 7px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.scheduleNavDate img {
+  padding-right: 5px;
+}
+
+.scheduleNavDate {
+  display: flex;
+  align-items: center;
+}
+.scheduleNavDate p {
+  font-size: 1rem;
+}
+
+/* ================== Week ================== */
+.scheduleWeek {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+  padding: 30px 37px;
+  border-bottom: 1px solid #2D2C2F;
+}
+.scheduleWeek p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+  padding: 5px 10px;
+  border-radius: 100%;
+  transition: 0.2s;
+}
+.scheduleWeek p.active {
+  color: #000;
+  background-color: #76DE99;
+  font-weight: bold;
+}
+
+/* ================== Schedule List ================== */
+.scheduleList {
+  margin: 50px 62px 0 62px;
+  height: 45vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scheduleList::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================== Day Header ================== */
+.scheduleDayHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #1F2022;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.scheduleDayHeader img {
+  background-color: #202020;
+  border: 1px solid #2D2C2F;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleDay {
+  display: flex;
+  align-items: flex-end;
+}
+.scheduleDay b {
+  font-size: 1.7rem;
+}
+.scheduleDay p {
+  padding-left: 10px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* ================== Tablet ================== */
+@media (max-width: 1024px) {
+  .scheduleMain {
+    flex: 1;
+    width: 100%;
+  }
+  .container {
+    width: 99%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .scheduleList {
+    margin: 50px 70px 0;
+  }
+  .scheduleNav {
+    padding: 20px 28px;
+  }
+  .scheduleWeek {
+    display: flex;
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=schedule.module.css.map */

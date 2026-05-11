@@ -1,0 +1,315 @@
+.setting {
+  width: 1260px;
+  margin: 0 auto;
+  font-family: "PyeojinGothic";
+  position: relative;
+}
+.setting .inner {
+  width: 100%;
+}
+.setting .inner > h1 {
+  margin-top: 100px;
+  font-size: 40px;
+}
+.setting .inner .account > h2 {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  margin-left: 9px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.setting .inner .account .accountGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 380px);
+  gap: 50px;
+}
+.setting .inner .account .accountGrid .profileCard {
+  background-color: #1F2022;
+  border-radius: 11px;
+  border: 1px solid #2D2C2F;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.setting .inner .account .accountGrid .profileCard .profileIcon {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.setting .inner .account .accountGrid .profileCard .profileIcon > p {
+  margin-left: 24px;
+}
+.setting .inner .account .accountGrid .profileCard .profileIcon .profileText > strong {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: block;
+}
+.setting .inner .account .accountGrid .profileCard .profileIcon .profileText > p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.setting .inner .account .accountGrid .profileCard .moreBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.setting .inner .account .accountGrid .loginCard {
+  background-color: #1F2022;
+  border-radius: 11px;
+  border: 1px solid #2D2C2F;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 24px;
+  gap: 12px;
+}
+.setting .inner .account .accountGrid .loginCard > span {
+  font-size: 12px;
+  font-weight: 700;
+}
+.setting .inner .account .accountGrid .loginCard .loginType {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.setting .inner .account .accountGrid .loginCard .loginType > p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.setting .inner .storeInfo > h2 {
+  margin-bottom: 10px;
+  margin-left: 9px;
+  margin-top: 42px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.setting .inner .storeInfo .infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.setting .inner .storeInfo .infoList span {
+  font-size: 12px;
+  font-weight: 400;
+}
+.setting .inner .storeInfo .infoList input {
+  font-size: 16px;
+  font-weight: 500;
+}
+.setting .inner .storeInfo .infoList .infoName,
+.setting .inner .storeInfo .infoList .infoAdd {
+  padding-left: 24px;
+  background-color: #1F2022;
+  border-radius: 11px;
+  border: 1px solid #2D2C2F;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  gap: 10px;
+}
+.setting .inner .storeInfo .infoList .infoName input,
+.setting .inner .storeInfo .infoList .infoAdd input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+.setting .inner .storeInfo .infoList .infoName.modify,
+.setting .inner .storeInfo .infoList .infoAdd.modify {
+  border-color: #2D2C2F;
+  background-color: #262728;
+}
+.setting .inner .storeInfo .infoList .infoName.modify input,
+.setting .inner .storeInfo .infoList .infoAdd.modify input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+.setting .inner .storeInfo .infoList .infoName.modify:focus-within,
+.setting .inner .storeInfo .infoList .infoAdd.modify:focus-within {
+  border-color: #76DE99;
+}
+.setting .inner .storeInfo .infoList .infoAdd {
+  background-color: #1F2022;
+  border-radius: 11px;
+  border: 1px solid #2D2C2F;
+}
+.setting .inner .actionArea {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 21px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.setting .inner .actionArea button {
+  min-width: 66px;
+  height: 38px;
+  border: 0;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.setting .inner .actionArea .cancelBtn {
+  background-color: #DBE2DD;
+}
+.setting .inner .actionArea .cancelBtn:hover {
+  background-color: #BEC7C0;
+}
+.setting .inner .actionArea .submitBtn {
+  margin-left: 8px;
+  background-color: #76DE99;
+}
+.setting .inner .actionArea .submitBtn:hover {
+  background-color: #68C989;
+}
+.setting .inner .dangerArea {
+  margin-top: 80px;
+}
+.setting .inner .dangerArea button {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.setting .inner .dangerArea button img {
+  width: 16px;
+  height: 16px;
+}
+.setting .inner .dangerArea .logoutBtn {
+  color: #fff;
+  margin-bottom: 14px;
+}
+.setting .inner .dangerArea .logoutBtn:hover {
+  color: #d1d1d1;
+}
+.setting .inner .dangerArea .deleteBtn {
+  color: #FF6161;
+}
+.setting .inner .dangerArea .deleteBtn:hover {
+  color: #bd4646;
+}
+.setting .inner .dangerArea .deleteBtn,
+.setting .inner .dangerArea .logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.setting .popupWrap {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #17181B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.setting .popupWrap .resetBox {
+  width: 456px;
+}
+.setting .popupWrap .resetBox > h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.setting .popupWrap .resetBox > p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 16px;
+}
+.setting .popupWrap .resetBox .pwd {
+  margin: 72px 0;
+}
+.setting .popupWrap .resetBox .pwd .inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.setting .popupWrap .resetBox .pwd .inputGroup input {
+  padding-left: 24px;
+  background-color: #1F2022;
+  border-radius: 11px;
+  border: 1px solid #2D2C2F;
+  height: 60px;
+  outline: none;
+  color: white;
+}
+.setting .popupWrap .resetBox .pwd .inputGroup input:focus {
+  border-color: #6FDB95;
+}
+.setting .popupWrap .resetBox .pwd .inputGroup .passwordCheck {
+  margin-top: 32px;
+}
+.setting .popupWrap .resetBox .buttonWrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.setting .popupWrap .resetBox .buttonWrap button {
+  min-width: 66px;
+  height: 38px;
+  border: 0;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.setting .popupWrap .resetBox .buttonWrap .cancelBtn {
+  background-color: #DBE2DD;
+}
+.setting .popupWrap .resetBox .buttonWrap .cancelBtn:hover {
+  background-color: #BEC7C0;
+}
+.setting .popupWrap .resetBox .buttonWrap .submitBtn {
+  margin-left: 8px;
+  background-color: #76DE99;
+}
+.setting .popupWrap .resetBox .buttonWrap .submitBtn:hover {
+  background-color: #68C989;
+}
+
+@media (max-width: 1023px) {
+  .setting {
+    width: 90%;
+  }
+  .setting .popupWrap .resetBox h1 {
+    font-size: 30px;
+  }
+  .setting .inner .content .account .accountGrid {
+    grid-template-columns: 6fr 4fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .setting .inner > h1 {
+    font-size: 30px;
+    margin-top: 70px;
+  }
+  .setting .inner .content .account .accountGrid .profileCard .profileIcon .profileText > strong {
+    font-size: 16px;
+  }
+  .setting .inner .content .account .accountGrid .profileCard .moreBtn {
+    top: 5px;
+    right: 0;
+  }
+}/*# sourceMappingURL=setting.module.css.map */

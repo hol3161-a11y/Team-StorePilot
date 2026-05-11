@@ -1,0 +1,547 @@
+/* ================== Layout ================== */
+.staff {
+  margin: 100px auto;
+  width: 100%;
+  max-width: 1260px;
+}
+
+.staffContainer {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.staffMain {
+  flex: 1;
+  width: 100%;
+}
+
+/* ================== Header ================== */
+.staffHeader {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .staffTitle {
+    color: #76de99;
+  }
+}
+
+.total {
+  display: flex;
+  align-items: flex-end;
+  color: #766f6f;
+  font-size: 1rem;
+  margin-top: 5px;
+
+  p {
+    padding-left: 5px;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/* ================== Actions (검색 + 버튼) ================== */
+.staffActions {
+  margin: 35px auto 0;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 250px;
+  height: 35px;
+  background-color: #262729 !important;
+  border: 1px solid #76de99 !important;
+  border-radius: 50px !important;
+  padding: 0 10px;
+}
+
+.searchBar input {
+  font-family: inherit !important;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle !important;
+}
+
+.staffActionButtons img {
+  width: 18px;
+  height: 18px;
+}
+
+.staffActionButtons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  img {
+    cursor: pointer;
+    background-color: #76de99;
+    width: 33px;
+    height: 33px;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+}
+
+/* ================== Checkbox ================== */
+.checkbox {
+  appearance: none;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  aspect-ratio: 1/1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262729;
+  border: 1px solid #5a5b5c;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+
+  &:checked {
+    background: url(/img/icon/ic-check.svg) no-repeat center / contain;
+    background-color: #85d575;
+    border: 1px solid #5a5b5c;
+    border-radius: 3px;
+  }
+}
+
+/* ================== Table ================== */
+.staffTable {
+  width: 100%;
+  background-color: #1f2022;
+  overflow-y: auto;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+
+  height: 50vh;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.staffTable::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================== 공통 컬럼 ================== */
+$table-columns: 5% 9% 9% 10% 8% 12% 12% 12% 5%;
+
+/* ================== Table Header ================== */
+.tableHeader {
+  display: grid;
+  grid-template-columns: $table-columns;
+  align-items: center;
+  column-gap: 20px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+
+  padding: 23px 0 23px 36px;
+  background-color: #262729;
+
+  list-style: none;
+  margin: 0;
+
+  img {
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  li {
+    color: #e8e8e8;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+/* ================== Table Row ================== */
+.tableRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: $table-columns;
+  align-items: center;
+  column-gap: 20px;
+
+  padding: 27px 0 27px 36px;
+  border-bottom: 1px solid #2d2c2f;
+
+  list-style: none;
+
+  position: relative;
+
+  button {
+    background-color: #76de99;
+    border: none;
+    color: black;
+    border-radius: 9px;
+    padding: 6px 15px;
+    font-size: 14px;
+    cursor: pointer;
+
+    grid-column: 9;
+    justify-self: end;
+    white-space: nowrap;
+  }
+
+  img {
+    position: static;
+    justify-self: end;
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 1rem;
+    color: #e8e8e8;
+    letter-spacing: 7%;
+    font-weight: lighter;
+  }
+
+  span:nth-of-type(6),
+  span:nth-of-type(7) {
+    letter-spacing: 10%;
+  }
+}
+
+.tableRow:hover {
+  background-color: #292929;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 0;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/* ================== Input ================== */
+.tableRow span input {
+  width: 100%;
+  height: 32px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  background-color: transparent;
+  border: 1px solid #898f9a;
+  color: #e8e8e8;
+}
+
+.timeInput::-webkit-calendar-picker-indicator {
+  filter: invert(60%) sepia(10%) saturate(200%) hue-rotate(180deg);
+}
+
+.tableBody {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ================= max-width: 1470px =================== */
+@media (max-width: 1470px) {
+  .staff {
+    margin: 100px auto;
+    width: 90%;
+  }
+
+  .staffTable {
+    width: 100%;
+    background-color: #1f2022;
+    overflow-y: auto;
+    overflow-x: auto;
+
+    height: 50vh;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .staffTable::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ================== 공통 컬럼 ================== */
+  $table-columns: 2% 7% 7% 10% 8% 12% 13% 15% 6%;
+
+  .tableHeader {
+    display: grid;
+    grid-template-columns: $table-columns;
+    align-items: center;
+    column-gap: 20px;
+
+    padding: 23px 0 23px 36px;
+    background-color: #262729;
+
+    list-style: none;
+    margin: 0;
+
+    img {
+      padding-left: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    li {
+      color: #e8e8e8;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  .tableRow {
+    width: 100%;
+    display: grid;
+    grid-template-columns: $table-columns;
+    align-items: center;
+    column-gap: 20px;
+
+    padding: 27px 0 27px 36px;
+    border-bottom: 1px solid #2d2c2f;
+
+    list-style: none;
+
+    position: relative;
+
+    button {
+      background-color: #76de99;
+      border: none;
+      color: black;
+      border-radius: 9px;
+      padding: 6px 15px;
+      font-size: 14px;
+      cursor: pointer;
+
+      grid-column: 9;
+      justify-self: end;
+      white-space: nowrap;
+    }
+
+    img {
+      position: static;
+      justify-self: end;
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 1rem;
+      color: #e8e8e8;
+      letter-spacing: 7%;
+      font-weight: lighter;
+    }
+
+    span:nth-of-type(6),
+    span:nth-of-type(7) {
+      letter-spacing: 10%;
+    }
+  }
+
+  .tableRow span input {
+    width: 100%;
+    height: 32px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    border: 1px solid #898f9a;
+    color: #e8e8e8;
+  }
+
+  .timeInput::-webkit-calendar-picker-indicator {
+    filter: invert(60%) sepia(10%) saturate(200%) hue-rotate(180deg);
+  }
+
+  .tableBody {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* ================== max-width: 1335px ================== */
+@media (max-width: 1335px) {
+  .staffTable {
+    height: auto;
+    overflow: visible;
+    border: none;
+    background: none;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    display: block;
+    padding: 16px;
+    margin-bottom: 15px;
+
+    background-color: #262729;
+    border-radius: 10px;
+    border: 1px solid #2d2c2f;
+  }
+
+  .tableRow span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  .tableRow span::before {
+    content: attr(data-label);
+    color: #888;
+    font-size: 12px;
+  }
+
+  .tableRow img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    opacity: 1;
+  }
+
+  .tableRow button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  span:nth-of-type(1) {
+    margin-top: 10px;
+  }
+
+}
+
+/* ================== 태블릿 ================== */
+@media (max-width: 1023px) {
+  .staff {
+    margin: 70px auto 0;
+    width: 90%;
+  }
+
+  .staffHeader {
+    h2 {
+      font-size: 32px;
+    }
+
+    .staffTitle {
+      color: #76de99;
+    }
+  }
+
+  .staffTable {
+    height: auto;
+    overflow: visible;
+    border: none;
+    background: none;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    display: block;
+    padding: 16px;
+    margin-bottom: 15px;
+
+    background-color: #262729;
+    border-radius: 10px;
+    border: 1px solid #2d2c2f;
+  }
+
+  .tableRow span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  .tableRow span::before {
+    content: attr(data-label);
+    color: #888;
+    font-size: 12px;
+  }
+
+  /* 🔥 수정 아이콘 위치 변경 */
+  .tableRow img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    opacity: 1;
+  }
+
+  .tableRow button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  span:nth-of-type(1) {
+    margin-top: 10px;
+  }
+}
+
+/* ================== 모바일 ================== */
+@media (max-width: 768px) {
+  .staffTable {
+    height: auto;
+    border: none;
+    background: none;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    display: block;
+    padding: 16px;
+    margin-bottom: 15px;
+
+    background-color: #262729;
+    border-radius: 10px;
+    border: 1px solid #2d2c2f;
+  }
+
+  .tableRow span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  .tableRow span::before {
+    content: attr(data-label);
+    color: #888;
+    font-size: 12px;
+  }
+
+  /* 🔥 수정 아이콘 위치 변경 */
+  .tableRow img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    opacity: 1;
+  }
+
+  .tableRow button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  span:nth-of-type(1) {
+    margin-top: 10px;
+  }
+}

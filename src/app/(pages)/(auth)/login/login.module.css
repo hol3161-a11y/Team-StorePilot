@@ -1,0 +1,141 @@
+.container {
+  padding-top: 100px;
+  max-width: 564px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.container .brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+  gap: 10px;
+}
+.container .brand .brandTitle {
+  font-family: "KBLJump", sans-serif;
+  font-size: 67px;
+}
+.container .brand .brandTitle .brandTitle1 {
+  color: #E8E8E8;
+}
+.container .brand .brandTitle .brandTitle2 {
+  color: #76DE99;
+}
+.container .brand .brandDescription {
+  font-size: 24px;
+  color: #E8E8E8;
+}
+.container .loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container .loginForm .inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.container .loginForm .inputGroup .box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.container .loginForm .inputGroup .box .boxText {
+  width: 100%;
+  height: 60px;
+  background: #1F2022;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  padding: 0 24px;
+  color: #E8E8E8;
+  font-size: 18px;
+  line-height: 1.2;
+  outline: none;
+}
+.container .loginForm .inputGroup .box .boxText::-moz-placeholder {
+  color: #515151;
+}
+.container .loginForm .inputGroup .box .boxText::placeholder {
+  color: #515151;
+}
+.container .loginForm .inputGroup .box .passWord {
+  position: relative;
+}
+.container .loginForm .inputGroup .box .passWord .boxText {
+  padding-right: 56px;
+}
+.container .loginForm .inputGroup .box .passWord img {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.container .loginForm .loginBtn {
+  width: 100%;
+  height: 60px;
+  background: #76DE99;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container .loginForm .loginBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.container .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin: 30px 0;
+}
+.container .divider .dividerLine {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: #515151;
+}
+.container .divider .dividerText {
+  font-size: 16px;
+  color: #515151;
+}
+.container .socialLoginBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.container .socialLoginBtn .kakao img,
+.container .socialLoginBtn .naver img {
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.container .signupPrompt {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  gap: 6px;
+}
+.container .signupPrompt .signupText {
+  color: #B5B5B5;
+}
+.container .signupPrompt .signupLink {
+  color: #76DE99;
+}
+.container .errorText {
+  color: #ef4444;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: -40px;
+}/*# sourceMappingURL=login.module.css.map */

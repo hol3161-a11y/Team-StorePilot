@@ -1,0 +1,104 @@
+.period {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+
+    .periodItem {
+        position: relative;
+        // z-index: -1;
+    }
+
+    .periodBtn {
+        width: 70px;
+        background: #191A1C;
+        border: 1px solid rgba(179, 179, 179, 0.2);
+        font-size: 14px;
+        color: #e8e8e8;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:hover,
+        &.periodBtnOpen {
+            color: #fff;
+            border: 1px solid #76DE99;
+        }
+
+        &.periodBtnDisabled {
+            opacity: 0.3;
+            cursor: not-allowed;    // 비활성화시 커서 변경
+
+            &:hover {
+                color: #e8e8e8;
+                border: 1px solid rgba(179, 179, 179, 0.2);
+            }
+        }
+
+        >p {
+            width: 13px;
+
+            >img {
+                width: 100%;
+            }
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        background-color: #1F2022;
+        border: 1px solid rgba(118, 222, 153, 0.32);
+        border-radius: 10px;
+        padding: 4px;
+        list-style: none;
+        // z-index: 100;
+        width: 70px;
+        max-height: 200px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #565656;
+            border-radius: 999px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+
+            &:hover {
+                background: #76DE99;
+                border: 2px solid transparent;
+                background-clip: padding-box;
+            }
+        }
+
+        li {
+            padding: 6px;
+            font-size: 13px;
+            color: #e8e8e8;
+            border-radius: 7px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #2D2C2F;
+                padding-left: 8px;
+            }
+
+            &.dropdownActive {
+                color: #76DE99;
+                font-weight: bold;
+            }
+        }
+    }
+}

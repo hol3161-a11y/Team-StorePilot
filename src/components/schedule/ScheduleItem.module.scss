@@ -1,0 +1,152 @@
+/* ================== Schedule Item ================== */
+.scheduleItem {
+    display: flex;
+    margin: 38px 0 50px;
+}
+
+.card,
+.line,
+.scheduleItemContent,
+.scheduleItemGroup,
+.scheduleItemRow1,
+.scheduleItemRow2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/* ================== Checkbox ================== */
+.checkbox {
+    appearance: none;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    aspect-ratio: 1/1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262729;
+    border: 1px solid #5A5B5C;
+    border-radius: 3px;
+    align-self: center;
+
+    &:checked {
+        background: url(/img/icon/ic-check.svg) no-repeat center / contain;
+        background-color: #85D575;
+        border: 1px solid #5A5B5C;
+        border-radius: 3px;
+    }
+}
+
+
+
+
+
+
+/* ================== Card ================== */
+.card {
+    background-color: #24272C;
+    width: 100%;
+    border-radius: 11px;
+    margin-left: 15px;
+}
+
+
+.line {
+    border-left: 3px solid #76DE99;
+    margin: 20px 0 20px 23px;
+}
+
+.scheduleItemContent {
+    padding: 12px 0 12px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+
+
+
+
+/* ================== Grid ================== */
+.scheduleItemRow1,
+.scheduleItemRow2 {
+    display: grid;
+    grid-template-columns:
+        80px 1fr 80px 1fr;
+
+    align-items: center;
+}
+
+
+/* ================== Typography ================== */
+
+.scheduleItemRow1,
+.scheduleItemRow2 {
+    b {
+        color: #aaa;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    span {
+
+        font-size: 1rem;
+    }
+}
+
+
+.scheduleItemRow1 {
+    margin-bottom: 20px;
+}
+
+
+
+
+/* ================== Mobile ================== */
+@media (max-width: 768px) {
+
+    .scheduleItem {
+        margin: 20px 0 45px;
+    }
+
+    .card {
+        margin-left: 10px;
+    }
+
+    .line {
+        margin : 13px 0 10px 25px;
+    }
+
+    .scheduleItemContent {
+        padding-left: 15px;
+    }
+
+    .scheduleItemRow1,
+    .scheduleItemRow2 {
+        grid-template-columns: 100px 1fr;
+        row-gap: 15px;
+
+        b {
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    .scheduleItemRow1 {
+        margin-bottom: 15px;
+    }
+
+}

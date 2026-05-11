@@ -1,0 +1,705 @@
+.container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+  flex-direction: column;
+  max-width: 564px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.container .backLink {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #B5B5B5;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 44px;
+}
+.container .steps {
+  display: flex;
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  gap: 12px;
+}
+.container .steps .step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.container .steps .step .stepLine {
+  height: 2px;
+  background: #515151;
+  border-radius: 1px;
+}
+.container .steps .step .stepLabel {
+  color: #515151;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container .steps .step.active .stepLine {
+  background: #76DE99;
+}
+.container .steps .step.active .stepLabel {
+  color: #76DE99;
+}
+.container .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+.container .heading h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #E8E8E8;
+  margin: 0;
+}
+.container .heading span {
+  font-size: 15px;
+  color: #898F9A;
+}
+.container .tabs {
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding: 4px;
+  background: #1F2022;
+  border-radius: 10px;
+}
+.container .tabs .tabIndicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  background: #393B3D;
+  border-radius: 8px;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.container .tabs .tab {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #B5B5B5;
+  font-family: inherit;
+  transition: color 0.2s ease;
+}
+.container .tabs .tab .tabIcon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #B5B5B5;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+  transition: background-color 0.2s ease;
+}
+.container .tabs .tab .tabLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+.container .tabs .tab.active {
+  color: #E8E8E8;
+}
+.container .tabs .tab.active .tabIcon {
+  background-color: #E8E8E8;
+}
+.container .tabPanel {
+  margin-bottom: 24px;
+}
+.container .tabPanel .itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .tabPanel .itemList .itemRows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container .tabPanel .itemList .staffRow .staffLeft {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container .tabPanel .itemList .staffRow .staffLeft .staffHead {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.container .tabPanel .itemList .staffRow .staffLeft .staffMeta {
+  color: #898F9A;
+  font-size: 12px;
+}
+.container .tabPanel .itemList .staffRow .staffLeft .staffDays {
+  display: flex;
+  gap: 6px;
+}
+.container .tabPanel .itemList .staffRow .staffLeft .staffDays .staffDayChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 27px;
+  border-radius: 40px;
+  background: #1F2022;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  font-size: 12px;
+  font-weight: 600;
+  color: #B5B5B5;
+}
+.container .tabPanel .itemList .staffRow .staffLeft .staffDays .staffDayChip.chipActive {
+  background: rgba(118, 222, 153, 0.15);
+  border-color: rgba(118, 222, 153, 0.32);
+  color: #76DE99;
+}
+.container .tabPanel .itemList .staffRow .itemRight .staffPartBadge,
+.container .tabPanel .itemList .staffRow .itemRight .staffTime,
+.container .tabPanel .itemList .staffRow .itemRight .staffWage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 29px;
+  padding: 10px;
+  background: #1F2022;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 22px;
+  color: #E8E8E8;
+  font-size: 13px;
+  font-weight: 500;
+}
+.container .tabPanel .itemList .staffRow .itemRight .staffTime {
+  gap: 6px;
+}
+.container .tabPanel .itemList .staffRow .itemRight .staffTime svg {
+  color: #898F9A;
+}
+.container .tabPanel .itemList .itemRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+}
+.container .tabPanel .itemList .itemRow .itemInfo {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+.container .tabPanel .itemList .itemRow .itemInfo .itemName {
+  color: #E8E8E8;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .tabPanel .itemList .itemRow .itemInfo .itemDate {
+  color: #515151;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.container .tabPanel .itemList .itemRow .itemRight {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.container .tabPanel .itemList .itemRow .itemRight .itemQuantity {
+  color: #E8E8E8;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container .tabPanel .itemList .itemRow .itemRight .itemQuantity small {
+  font-size: 12px;
+  color: #898F9A;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.container .tabPanel .itemList .itemRow .itemRight .itemDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #515151;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.container .tabPanel .itemList .itemRow .itemRight .itemDelete .deleteIcon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #898F9A;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+  transition: background-color 0.15s ease;
+}
+.container .tabPanel .itemList .itemRow .itemRight .itemDelete:hover {
+  background-color: rgba(118, 222, 153, 0.15);
+  border-color: #76DE99;
+}
+.container .tabPanel .itemList .itemRow .itemRight .itemDelete:hover .deleteIcon {
+  background-color: #76DE99;
+}
+.container .tabPanel .itemList .summaryBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  margin-top: 6px;
+}
+.container .tabPanel .itemList .summaryBar .summaryStar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: #76DE99;
+  border-radius: 5px;
+  color: #17181B;
+  font-size: 13px;
+  line-height: 1;
+}
+.container .tabPanel .itemList .summaryBar .summaryText {
+  font-size: 14px;
+  color: #E8E8E8;
+}
+.container .tabPanel .itemList .addMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 46px;
+  background: transparent;
+  border: 1px dashed #515151;
+  border-radius: 10px;
+  color: #B5B5B5;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.container .tabPanel .itemList .addMoreBtn .addMoreIcon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #B5B5B5;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+  transition: background-color 0.15s ease;
+}
+.container .tabPanel .itemList .addMoreBtn:hover {
+  border-color: #76DE99;
+  color: #76DE99;
+}
+.container .tabPanel .itemList .addMoreBtn:hover .addMoreIcon {
+  background-color: #76DE99;
+}
+.container .tabPanel .itemForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #1F2022;
+  border-radius: 12px;
+  padding: 28px 30px;
+}
+.container .tabPanel .itemForm .fieldRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+.container .tabPanel .itemForm .chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.container .tabPanel .itemForm .chipGroup .chip {
+  padding: 9px 16px;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 8px;
+  color: #B5B5B5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+.container .tabPanel .itemForm .chipGroup .chip.chipActive {
+  background: rgba(118, 222, 153, 0.15);
+  border-color: rgba(118, 222, 153, 0.32);
+  color: #76DE99;
+}
+.container .tabPanel .itemForm .chipGroup .dayChip {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 8px;
+  color: #B5B5B5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+.container .tabPanel .itemForm .chipGroup .dayChip.chipActive {
+  background: rgba(118, 222, 153, 0.15);
+  border-color: rgba(118, 222, 153, 0.32);
+  color: #76DE99;
+}
+.container .tabPanel .itemForm .timeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.container .tabPanel .itemForm .timeRow .timeDropdown {
+  flex: 1;
+  position: relative;
+}
+.container .tabPanel .itemForm .timeRow .timeSeparator {
+  color: #898F9A;
+  font-size: 14px;
+}
+.container .tabPanel .itemForm .formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.container .tabPanel .itemForm .formField .fieldLabel {
+  font-size: 14px;
+  color: #B5B5B5;
+  font-weight: 600;
+}
+.container .tabPanel .itemForm .formField .categoryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container .tabPanel .itemForm .formField .aiBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.container .tabPanel .itemForm .formField .aiBadge .aiBadgeText {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: rgba(118, 222, 153, 0.15);
+  border: 1px solid rgba(118, 222, 153, 0.32);
+  border-radius: 6px;
+  color: #76DE99;
+  font-size: 12px;
+  font-weight: 500;
+}
+.container .tabPanel .itemForm .formField .aiBadge .aiBadgeText .aiBadgeIcon {
+  font-size: 11px;
+  line-height: 1;
+}
+.container .tabPanel .itemForm .formField .aiBadge .aiApplyBtn {
+  padding: 4px 10px;
+  background: #76DE99;
+  border: none;
+  border-radius: 6px;
+  color: #17181B;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+.container .tabPanel .itemForm .formField .industryDisplay {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  padding: 0 20px;
+}
+.container .tabPanel .itemForm .formField .industryDisplay .industryDisplayIcon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #76DE99;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+  flex-shrink: 0;
+}
+.container .tabPanel .itemForm .formField .industryDisplay .industryDisplayLabel {
+  flex: 1;
+  color: #E8E8E8;
+  font-size: 15px;
+  font-weight: 600;
+}
+.container .tabPanel .itemForm .formField .industryDisplay .lockIcon {
+  color: #515151;
+  flex-shrink: 0;
+}
+.container .tabPanel .itemForm .formField .dropdown {
+  position: relative;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  padding: 0 20px;
+  cursor: pointer;
+  font-family: inherit;
+  outline: none;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownTrigger:focus-visible, .container .tabPanel .itemForm .formField .dropdown .dropdownTrigger.open {
+  border-color: #76DE99;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownTrigger .dropdownValue {
+  color: #E8E8E8;
+  font-size: 15px;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownTrigger .dropdownPlaceholder {
+  color: #515151;
+  font-size: 15px;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownTrigger .dropdownChevron {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #898F9A;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownTrigger.open .dropdownChevron {
+  transform: rotate(180deg);
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  color: #E8E8E8;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownItem.dropdownItemSelected {
+  background: rgba(118, 222, 153, 0.15);
+  color: #76DE99;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownItem .dropdownItemCheck {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #76DE99;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownItem.dropdownItemAdd {
+  justify-content: center;
+  color: #76DE99;
+  font-weight: 600;
+  border-top: 1px solid rgba(179, 179, 179, 0.2);
+  margin-top: 4px;
+  padding-top: 12px;
+  border-radius: 0;
+}
+.container .tabPanel .itemForm .formField .fieldInput {
+  width: 100%;
+  height: 50px;
+  background: #17181B;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  padding: 0 20px;
+  color: #E8E8E8;
+  font-size: 15px;
+  line-height: 1.2;
+  outline: none;
+  font-family: inherit;
+}
+.container .tabPanel .itemForm .formField .fieldInput:focus {
+  border-color: #76DE99;
+}
+.container .tabPanel .itemForm .formField .fieldInput::-moz-placeholder {
+  color: #515151;
+}
+.container .tabPanel .itemForm .formField .fieldInput::placeholder {
+  color: #515151;
+}
+.container .tabPanel .itemForm .formField .fieldInput.fieldInputError, .container .tabPanel .itemForm .formField .fieldInput.fieldInputError:focus {
+  border-color: #E55C5C;
+}
+.container .tabPanel .itemForm .formField .dropdown .dropdownTrigger.dropdownTriggerError, .container .tabPanel .itemForm .formField .dropdown .dropdownTrigger.dropdownTriggerError.open, .container .tabPanel .itemForm .formField .dropdown .dropdownTrigger.dropdownTriggerError:focus-visible {
+  border-color: #E55C5C;
+}
+.container .tabPanel .itemForm .formField .fieldError {
+  margin: 0;
+  font-size: 13px;
+  color: #E55C5C;
+}
+.container .tabPanel .itemForm .confirmBtn {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: #76DE99;
+  border: none;
+  border-radius: 8px;
+  color: #17181B;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 4px;
+  transition: opacity 0.15s ease;
+}
+.container .tabPanel .itemForm .confirmBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.container .tabPanel .itemForm .confirmBtn .confirmIcon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #17181B;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+}
+.container .tabPanel .emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #1F2022;
+  border-radius: 12px;
+  padding: 70px 50px;
+}
+.container .tabPanel .emptyState .emptyIconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: #393B3D;
+  border-radius: 12px;
+  margin-bottom: 4px;
+}
+.container .tabPanel .emptyState .emptyIcon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #B5B5B5;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+}
+.container .tabPanel .emptyState .emptyTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #E8E8E8;
+  margin: 0;
+}
+.container .tabPanel .emptyState .emptyDesc {
+  font-size: 13px;
+  color: #898F9A;
+  margin: 0 0 10px;
+}
+.container .tabPanel .emptyState .addBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: #76DE99;
+  border: none;
+  border-radius: 8px;
+  color: #17181B;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+.container .tabPanel .emptyState .addBtn .addIcon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #17181B;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+}
+.container .completeBtn {
+  width: 100%;
+  height: 54px;
+  background: #76DE99;
+  border: none;
+  border-radius: 10px;
+  color: #17181B;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}/*# sourceMappingURL=storeSetting.module.css.map */

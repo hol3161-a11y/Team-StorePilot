@@ -1,0 +1,913 @@
+@import url('./globals.css');
+@import url('./reset.css');
+
+
+.section1 {
+   text-align: center;
+   padding-bottom: 300px;
+
+   position: relative;
+   //background: radial-gradient(circle at 70% 50%, rgba(34, 197, 94, 0.15), transparent 60%);
+}
+
+.bottomGlow {
+   position: absolute;
+   bottom: 100px;
+   left: 50%;
+   transform: translateX(-50%);
+
+   width: 1000px;
+   height: 800px;
+
+   background: radial-gradient(ellipse at center,
+         rgba(34, 197, 94, 0.35) 0%,
+         rgba(34, 197, 94, 0.15) 40%,
+         rgba(34, 197, 94, 0.05) 60%,
+         transparent 80%);
+
+   filter: blur(60px);
+   opacity: 0.8;
+}
+
+.grid {
+   position: absolute;
+   inset: 0;
+   background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+   background-size: 40px 40px;
+   mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+// 랜딩페이지 타이틀
+.main_title {
+   h2 {
+      font-size: 60px;
+      font-family: 'KBLJump';
+      font-weight: 800;
+      padding: 200px 0px 20px;
+
+      >span {
+         //color: rgb(118, 222, 153);
+         background: linear-gradient(90deg, #22c55e, #4ade80);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+   }
+
+   h3 {
+      font-size: 30px;
+      font-family: 'PyeojinGothic';
+      font-weight: 700;
+
+      >span {
+         color: rgb(118, 222, 153);
+      }
+   }
+
+   >p {
+      padding: 50px;
+   }
+}
+
+.main_txt {
+   padding: 90px;
+
+}
+
+
+// ai 입력창 ui 
+.chat_preview {
+   font-family: 'PyeojinGothic';
+   width: 100%;
+   max-width: 581px;
+   height: 53px;
+   border-radius: 20px;
+   border: 1px solid rgb(118, 222, 153);
+   background-color: rgba(0, 0, 0, 0.685);
+
+   padding: 10px 10px;
+   margin: 20px;
+   display: inline-block;
+
+   p {
+      margin: 6px 0;
+   }
+}
+
+.cursor {
+   display: inline-block;
+   width: fit-content;
+   border-right: 2px solid #00ff9f;
+   white-space: nowrap;
+   overflow: hidden;
+   letter-spacing: 1px;
+   animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+   50% {
+      border-color: transparent;
+   }
+}
+
+// 버튼
+.buttons {
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   gap: 25px;
+   position: relative;
+  z-index: 10;
+
+   .primary {
+      width: 125px;
+      height: 45px;
+      background: linear-gradient(135deg, #22c55e, #4ade80);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+      border-radius: 10px;
+      font-family: 'PyeojinGothic';
+      font-size: 17px;
+      border: none;
+      &:hover {
+         background: linear-gradient(135deg, #0bbe4d, #30c265);
+      }
+   }
+
+
+   .secondary {
+      width: 125px;
+      height: 45px;
+      border-radius: 10px;
+      font-family: 'PyeojinGothic';
+      font-size: 17px;
+      border: 1px solid rgb(177, 177, 177);
+      color: white;
+      background-color: rgba(255, 255, 255, 0);
+      &:hover {
+         border: 1px solid rgb(78, 199, 118);
+         color: rgb(78, 199, 118);
+      }
+   }
+}
+
+
+
+
+/* 핵심 기능 카드 */
+.section2 {
+   text-align: center;
+   justify-content: center;
+   padding-bottom: 250px;
+
+   h4 {
+      font-size: 40px;
+      font-family: 'PyeojinGothic';
+      font-weight: 500;
+      padding: 100px;
+   }
+
+   .sec2 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      gap: 75px;
+   }
+
+   .card_box {
+      width: 252px;
+      height: 185px;
+      border-radius: 20px;
+      background-color: rgb(16, 16, 17);
+      border: 1px solid rgb(118, 222, 153);
+      padding: 20px 20px 0px;
+      text-align: left;
+      transition: transform 0.25s ease;
+
+      >p {
+         font-size: 13px;
+         line-height: 1.5;
+      }
+   }
+
+   .card_box:hover {
+      background-color: rgba(23, 31, 23, 0.61);
+      transform: scale(1.03);
+   }
+
+   .card_title {
+      //display: flex;
+      //gap: 10px;
+      padding: 10px 0 30px;
+
+      >span {
+         font-size: 20px;
+         padding-left: 10px;
+      }
+   }
+
+}
+
+
+/* 기능 상세 3개 */
+.section3 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 120px;
+   padding-bottom: 250px;
+
+
+   .fadeGroup {
+      transition: 1s;
+
+   }
+
+   .show {
+
+      margin-left: 0px;
+      transform: translateY(50px) scale(1);
+      filter: blur(0);
+   }
+
+
+   //    .fade {
+   //   opacity: 0;
+   //   transform: translateY(70px) scale(0.96);
+   //   filter: blur(6px);
+   //   transition: 
+   //     opacity 0.8s ease,
+   //     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+   //     filter 0.6s ease;
+   // }
+
+
+
+
+   .function1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 150px;
+
+      padding: 60px 0;
+      width: 100%;
+      max-width: 1260px;
+      margin: 0 auto;
+
+
+      >div {
+         width: 45%;
+         flex-shrink: 0;
+      }
+
+
+      .functionImg1 {
+         position: relative;
+
+         .Ai_Img {
+            width: 490px;
+            height: 206px;
+            z-index: 1;
+         }
+
+         .Aichat_Img {
+            position: absolute;
+            top: -30px;
+            left: 230px;
+            z-index: 2;
+
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+
+         }
+
+
+      }
+
+      .functionTxt1 {
+         width: 100%;
+         max-width: 538px;
+         min-height: 290px;
+         background-color: rgb(30, 33, 38);
+         box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+
+         backdrop-filter: blur(6px);
+         text-align: left;
+         border-radius: 20px;
+         padding: 10px 30px 30px 40px;
+
+         position: relative;
+         overflow: hidden;
+
+         &::before {
+            border-radius: 20px 0 0 20px;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 20px;
+            width: 8px;
+            height: 100%;
+
+            background: linear-gradient(to bottom,
+                  rgb(118, 222, 153),
+                  rgba(118, 222, 153, 0.2));
+         }
+
+         h4 {
+            font-size: 36px;
+            font-family: 'PyeojinGothic';
+            font-weight: 500;
+            color: rgb(118, 222, 153);
+         }
+
+         p {
+            font-size: 16px;
+            font-family: 'PyeojinGothic';
+            font-weight: 300;
+            line-height: 1.8;
+         }
+      }
+
+
+      .g_Img {
+         width: 100%;
+         height: 320px;
+      }
+
+      .sales_Img {
+         position: absolute;
+         top: -10px;
+         right: -40px;
+         z-index: 2;
+
+         //animation: float 3s ease-in-out infinite;
+         filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+
+      }
+
+
+   }
+
+
+
+   // 기능 3번
+   .functionImg2 {
+      position: relative;
+
+      .back_Img {
+         position: relative;
+         top: 0;
+         left: 60px;
+      }
+
+      .front_Img {
+         position: absolute;
+         bottom: -20px;
+         left: 0px;
+         z-index: 2;
+      }
+   }
+}
+
+
+@keyframes float {
+   0% {
+      transform: translateY(0px);
+   }
+
+   50% {
+      transform: translateY(-10px);
+   }
+
+   100% {
+      transform: translateY(0px);
+   }
+}
+
+
+/* 하단 내용 */
+.section4 {
+   text-align: center;
+   margin-bottom: 200px;
+   font-family: 'PyeojinGothic';
+
+   .bottomText {
+
+      >span {
+         font-size: 40px;
+         font-weight: 700;
+      }
+   }
+
+   .btn {
+      padding: 40px;
+
+      >button {
+         width: 188px;
+         height: 61px;
+         font-size: 23px;
+         color: white;
+         background-color: transparent;
+         border: 1px solid rgb(118, 222, 153);
+         border-radius: 20px;
+
+         position: relative;
+         overflow: hidden;
+         transition: all 0.3s ease;
+      }
+
+      button::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: -120%;
+         width: 120%;
+         height: 100%;
+         background: linear-gradient(120deg, transparent, rgba(74, 161, 86, 0.5), transparent);
+         transition: 0.5s;
+      }
+
+      button:hover::after {
+         left: 100%;
+      }
+
+      button:hover {
+         background: linear-gradient(120deg, transparent, rgba(74, 161, 86, 0.5), transparent);
+      }
+
+
+   }
+
+   .arrow {
+      padding-left: 10px;
+   }
+}
+
+.footer {
+   border-top: 1px solid rgb(118, 222, 153, 0.3);
+   background: linear-gradient(to top,
+         rgba(20, 25, 22, 0.8),
+         transparent);
+
+   backdrop-filter: blur(6px);
+
+   .footer_title {
+      padding: 20px;
+
+      >h2 {
+         font-size: 28px;
+         font-family: 'KBLJump';
+         font-weight: 800;
+         padding: 20px 100px 30px;
+
+         >span {
+            color: rgb(118, 222, 153);
+         }
+      }
+
+   }
+
+   p {
+      margin-top: 10px;
+      font-size: 13px;
+      font-family: 'PyeojinGothic';
+      color: rgba(255, 255, 255, 0.5);
+      padding: 20px 100px 20px;
+   }
+}
+
+
+
+
+/* ================= 반응형 ==================== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+   .section1 {
+      padding: 100px 40px;
+
+      .main_title {
+         h2 {
+            font-size: 48px;
+         }
+
+         h3 {
+            font-size: 22px;
+         }
+      }
+   }
+
+   .chat_preview {
+      width: 381px;
+   }
+
+   .buttons {
+      .primary {
+         width: 100px;
+         font-size: 15px;
+      }
+
+      .secondary {
+         width: 100px;
+         font-size: 15px;
+      }
+   }
+
+   .section2 h4 {
+      padding: 100px;
+      font-family: PyeojinGothic;
+      font-size: 35px;
+      font-weight: 500;
+   }
+
+   .sec2 {
+      text-align: center;
+      justify-content: center;
+      gap: 45px;
+      display: flex;
+      padding: 20px;
+
+      .card_title {
+         padding: 10px 0 20px;
+
+         >span {
+            font-size: 18px;
+         }
+
+      }
+
+      .card_box>p {
+         font-size: 11px;
+         line-height: 1.5;
+      }
+   }
+
+
+
+   .section3 {
+      .function1 {
+         gap: 60px;
+         padding: 40px 20px;
+      }
+
+      .functionTxt1 {
+         width: 100%;
+      }
+   }
+
+
+
+}
+
+@media (max-width: 1366px) {
+
+   .section3 {
+
+      .function1 {
+         
+         .Ai_Img {
+            width: 100%;
+            max-width: 420px;
+         }
+                 
+         .functionTxt1 {
+            width: 100%;
+            max-width: 438px;
+
+            >h4 {
+               font-size: 30px;
+               margin-top: 30px;
+            }
+
+            >p {
+               font-size: 14px;
+            }
+
+         }
+      }
+      .Aichat_Img {
+   
+    
+    width: 230px;
+   }
+   }
+
+   .sec2 {
+      padding: 20px;
+
+      .card_title {
+         padding: 10px 0 18px;
+
+         >span {
+            font-size: 18px;
+         }
+      }
+   }
+
+   .section4 {
+      .bottomText>span {
+         font-size: 35px;
+      }
+
+      .btn>button {
+         width: 155px;
+         height: 59px;
+         font-size: 20px;
+      }
+   }
+
+   .footer .footer_title {
+      >h2 {
+         font-size: 20px;
+         padding: 20px 50px 30px;
+      }
+
+      >p {
+         font-size: 10px;
+         padding: 20px 50px;
+      }
+   }
+}
+
+
+/* 모바일 */
+@media (max-width: 768px) {
+
+   .section1 {
+      padding: 100px 40px;
+
+      .main_title {
+         h2 {
+            font-size: 48px;
+            padding: 101px 0 20px;
+         }
+
+         h3 {
+            font-size: 22px;
+         }
+      }
+   }
+
+   .chat_preview {
+      max-width: 321px;width: auto;
+   }
+
+   .section3 {
+
+      .function1 {
+         flex-direction: column;
+         gap: 30px;
+         padding: 20px;
+         text-align: center;
+
+         .functionTxt1 {
+            width: 100%;
+            max-width: 488px;
+            padding: 30px;
+
+            >h4 {
+               font-size: 25px;
+               margin-top: 10px;
+            }
+
+            >p {
+               font-size: 15px;
+            }
+         }
+      }
+
+      .function1>div {
+         width: 100%;
+      }
+
+      .Aichat_Img {
+    width: 50%;
+   }
+
+   .sales_Img {
+      display: none;
+   }
+
+   }
+
+   // 핵심 기능 카드
+   .sec2 {
+      padding: 20px;
+      flex-wrap: wrap;
+
+      .card_title {
+         padding: 10px 0 20px;
+
+         >span {
+            font-size: 18px;
+         }
+
+         >img {
+            width: 25px;
+            height: 25px;
+         }
+
+      }
+   }
+
+   .section4 {
+      .bottomText>span {
+         font-size: 30px;
+      }
+
+      .btn>button {
+         width: 155px;
+         height: 59px;
+         font-size: 20px;
+      }
+   }
+
+   .footer .footer_title {
+      >h2 {
+         font-size: 20px;
+         padding: 20px 50px 30px;
+      }
+
+      >p {
+         font-size: 10px;
+         padding: 20px 50px;
+      }
+   }
+
+}
+
+
+/* 초소형 모바일 */
+@media (max-width: 480px) {
+
+   /* ===== section1 ===== */
+   .section1 {
+      padding: 60px 20px;
+
+      .main_title {
+         h2 {
+            font-size: 39px;
+            padding: 60px 0 15px;
+         }
+
+         h3 {
+            font-size: 16px;
+         }
+      }
+   }
+
+   .main_txt {
+      padding: 40px 10px;
+
+      p {
+         font-size: 14px;
+      }
+   }
+
+   .chat_preview {
+      width: 100%;
+      max-width: 280px;
+
+      font-size: 13px;
+   }
+
+   /* ===== 버튼 ===== */
+   .buttons {
+      display: flex;
+      gap: 10px;
+
+      .primary {
+         width: 90px;
+         font-size: 13px;
+      }
+
+      .secondary {
+         width: 90px;
+         font-size: 13px;
+      }
+   }
+
+
+   /* ===== section2 핵심기능카드 ===== */
+   .section2 h4 {
+      font-size: 24px;
+      padding: 50px 10px;
+   }
+
+   
+
+   // 핵심 기능 카드
+   .sec2 {
+      padding: 20px;
+      flex-wrap: wrap;
+
+      .card_title {
+         padding: 10px 0 20px;
+
+         >span {
+            font-size: 18px;
+         }
+
+         >img {
+            width: 25px;
+            height: 25px;
+         }
+
+      }
+   }
+
+   /* ===== section3 ===== */
+   .section3 {
+
+      .function1 {
+         gap: 20px;
+         padding: 10px;
+
+         .functionImg1 {
+
+            .Ai_Img,
+            .g_Img {
+
+               width: 370px;
+               height: 200px;
+
+            }
+
+            .Aichat_Img {
+               width: 231px;
+               z-index: 2;
+               filter: drop-shadow(0 10px 15px #0003);
+               animation: none;
+               position: absolute;
+               top: -25px;
+               left: 180px;
+
+            }
+            
+         }
+         .functionImg2{
+            padding: 120px;
+            .front_Img{
+               padding-bottom: 20px;
+
+            }
+            .back_Img{
+               display: none;
+            }
+
+         }
+
+         .functionTxt1 {
+            padding: 20px;
+            max-width: 368px;
+
+            h4 {
+               font-size: 20px;
+            }
+
+            p {
+               font-size: 14px;
+               line-height: 1.6;
+            }
+         }
+      }
+
+
+   }
+
+
+
+   /* ===== section4 ===== */
+   .section4 {
+      .bottomText>span {
+         font-size: 20px;
+      }
+
+      .btn>button {
+         width: 100%;
+         max-width: 220px;
+         height: 45px;
+         font-size: 16px;
+      }
+   }
+
+   /* ===== footer ===== */
+   .footer {
+      .footer_title {
+         h2 {
+            font-size: 18px;
+            padding: 20px;
+         }
+
+         p {
+            font-size: 10px;
+            padding: 10px 20px;
+         }
+      }
+   }
+
+}
