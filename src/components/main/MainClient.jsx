@@ -234,7 +234,7 @@ export default function MainClient() {
                             <p><img src='/img/icon/ic-main-staff.png' /></p>
                             <div className={style.summaryText}>
                                 <p>예상 인건비</p>
-                                <strong>{todayLaborCost.toLocaleString()}원</strong>
+                                 <strong>{(sales?.predictedAmount ?? 0).toLocaleString()} 원</strong>
                             </div>
                         </div>
                     </div>
