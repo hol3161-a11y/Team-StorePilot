@@ -1,0 +1,464 @@
+@charset "UTF-8";
+.back {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.popup {
+  margin-top: 50px;
+  width: 740px;
+  height: 820px;
+  background-color: #17181B;
+  border: 1px solid #2D2C2F;
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(100);
+  display: flex;
+  flex-direction: column;
+}
+.popup .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.popup .title .titleName {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.popup .title .titleName > h3 {
+  font-size: 24px;
+}
+.popup .title .titleName .editDate {
+  font-size: 16px;
+  font-weight: bold;
+  color: #898F9A;
+}
+.popup .title .xbtn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup .title .xbtn:hover {
+  background-color: #2D2C2F;
+}
+.popup .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+.popup .checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  aspect-ratio: 1/1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262729;
+  border: 1px solid #5A5B5C;
+  border-radius: 3px;
+}
+.popup .checkbox:checked {
+  background: url(/img/icon/ic-check.svg) no-repeat center/contain;
+  background-color: #85D575;
+  border: 1px solid #5A5B5C;
+  border-radius: 3px;
+}
+.popup .checkboxNone {
+  background-color: transparent;
+  border: none;
+  width: 13px;
+  height: 13px;
+  aspect-ratio: 1/1;
+}
+.popup {
+  /* 표 상단 */
+}
+.popup .graphTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup .graphTop .searchAndperiod {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.popup .graphTop .searchAndperiod .editDate {
+  font-size: 16px;
+  font-weight: bold;
+  color: #76DE99;
+}
+.popup .graphTop .searchAndperiod .searchBar {
+  width: 190px;
+  height: 33px;
+  background-color: #262729;
+  border: 1px solid #76DE99;
+  border-radius: 99999px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.popup .graphTop .searchAndperiod .searchBar > button {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popup .graphTop .searchAndperiod .searchBar > input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #e8e8e8;
+}
+.popup .graphTop .searchAndperiod .period {
+  padding: 0;
+  z-index: 6;
+}
+.popup .graphTop .searchAndperiod .period .dropdown {
+  z-index: 3;
+}
+.popup .graphTop .btns {
+  display: flex;
+  gap: 10px;
+}
+.popup .graphTop .btns > p {
+  width: 33px;
+  aspect-ratio: 1/1;
+  background-color: #76DE99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8;
+  cursor: pointer;
+}
+.popup {
+  /* 표 스타일 */
+}
+.popup .graph {
+  flex-grow: 1;
+  background-color: #1F2022;
+  border-radius: 11px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.popup .graph .text {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.popup .graph .text > div {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.popup .graph .text > div.plus {
+  color: #85D575;
+  font-weight: bold;
+}
+.popup .graph .text > div.minus {
+  color: #F34C4C;
+  font-weight: bold;
+}
+.popup .graph .text > div.sale {
+  font-weight: bold;
+}
+.popup .graph .text > div.date {
+  color: #898F9A;
+}
+.popup .graph .titleLine {
+  padding: 0 90px 0 20px;
+  background-color: #262729;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: bold;
+}
+.popup .graph .titleLine .sortTab {
+  cursor: pointer;
+}
+.popup .graph .titleLine .sortTab > p {
+  cursor: pointer;
+}
+.popup .graph .lines {
+  flex-grow: 1;
+  height: 413px;
+  overflow: auto;
+}
+.popup .graph .lines::-webkit-scrollbar {
+  width: 10px;
+}
+.popup .graph .lines::-webkit-scrollbar-track {
+  background: transparent;
+}
+.popup .graph .lines::-webkit-scrollbar-thumb {
+  background: #565656;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.popup .graph .lines::-webkit-scrollbar-thumb:hover {
+  background: #76DE99;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.popup .graph .inputLine {
+  height: 60px;
+  padding: 0 20px 0 73px;
+  border-bottom: 1px solid #2D2C2F;
+  display: flex;
+  align-items: center;
+}
+.popup .graph .inputLine .text {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+.popup .graph .inputLine .text > div {
+  align-items: center;
+  gap: 20px;
+}
+.popup .graph .inputLine .text > div > div {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+.popup .graph .inputLine .text input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #e8e8e8;
+  height: 35px;
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid rgba(137, 143, 154, 0.24);
+  border-radius: 5px;
+  padding: 0 8px;
+  margin: 0;
+  -moz-appearance: none;
+       appearance: none;
+  /* 브라우저 기본 스타일 제거 */
+  -webkit-appearance: none;
+}
+.popup .graph .inputLine .text input:focus {
+  outline: none;
+  border: 1px solid #76DE99;
+  color: #e8e8e8;
+}
+.popup .graph .inputLine .text input::-moz-placeholder {
+  color: #888888;
+}
+.popup .graph .inputLine .text input::placeholder {
+  color: #888888;
+}
+.popup .graph .inputLine .text .period {
+  flex: 1;
+  padding: 0;
+  z-index: 5;
+}
+.popup .graph .inputLine .text .period .periodItem {
+  width: 100%;
+}
+.popup .graph .inputLine .text .period .periodItem .periodBtn {
+  width: 100%;
+  height: 35px;
+  padding: 0 8px;
+}
+.popup .graph .inputLine .text .period .periodItem .dropdown {
+  width: 100%;
+}
+.popup .graph .inputLine .text .period .periodItem .dropdown > li {
+  font-size: 14px;
+}
+.popup .graph .inputLine .text .addBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.popup .graph .inputLine .text .addBtn:hover {
+  background-color: #262729;
+}
+.popup .graph .oneline {
+  height: 60px;
+  padding: 0 20px;
+  border-bottom: 1px solid #2D2C2F;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.popup .graph .oneline .editBtn {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.popup .graph .oneline:hover {
+  background-color: #262729;
+  border-radius: 10px;
+}
+.popup .graph .oneline .text > div {
+  flex: 1;
+}
+.popup .graph .oneline .text .editInput {
+  flex: 1;
+}
+.popup .graph .oneline .text .editInput > input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #e8e8e8;
+  height: 35px;
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid rgba(137, 143, 154, 0.24);
+  border-radius: 5px;
+  padding: 0 8px;
+  margin: 0;
+  -moz-appearance: none;
+       appearance: none;
+  /* 브라우저 기본 스타일 제거 */
+  -webkit-appearance: none;
+}
+.popup .graph .oneline .text .editInput > input:focus {
+  outline: none;
+  border: 1px solid #76DE99;
+  color: #e8e8e8;
+}
+.popup .graph .oneline .text .editInput > input::-moz-placeholder {
+  color: #888888;
+}
+.popup .graph .oneline .text .editInput > input::placeholder {
+  color: #888888;
+}
+.popup .graph .oneline .period {
+  padding: 0;
+}
+.popup .graph .oneline .period .periodItem {
+  width: 100%;
+}
+.popup .graph .oneline .period .periodItem .periodBtn {
+  width: 100%;
+  height: 35px;
+  padding: 0 8px;
+}
+.popup .graph .oneline .period .periodItem .dropdown {
+  width: 100%;
+}
+.popup .graph .oneline .period .periodItem .dropdown > li {
+  font-size: 14px;
+}
+.popup .graphBot > div {
+  padding: 0 95px 0 80px;
+}
+.popup .graphBot > div .text {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.popup .graphBot > div .text > p {
+  flex: 1;
+}
+.popup .graphBot > div .text > p.compare {
+  color: #898F9A;
+}
+.popup .graphBot > div .text > p.minus {
+  color: #F34C4C;
+}
+.popup .graphBot > div .text > p.plus {
+  color: #85d575;
+}
+.popup .saveBtn {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  background-color: #76DE99;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 1660px) {
+  .popup {
+    margin: 70px 20px;
+    height: 100%;
+  }
+  .popup .graph .titleLine {
+    padding: 0 50px 0 10px;
+    gap: 10px;
+  }
+  .popup .graph .titleLine .sortTab {
+    align-items: center;
+  }
+  .popup .graph .inputLine {
+    padding: 0 10px 0 33px;
+  }
+  .popup .graph .inputLine .text {
+    gap: 10px;
+  }
+  .popup .graph .inputLine .text .dropdown {
+    min-width: 150px !important;
+  }
+  .popup .graph .oneline {
+    padding: 0 10px;
+    gap: 10px;
+  }
+  .popup .graphBot > div {
+    padding: 0 50px 0 33px;
+  }
+  .popup .graphBot > div .text {
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 480px) {
+  .graphTop {
+    gap: 10px;
+  }
+  .graphTop .btns {
+    gap: 5px !important;
+  }
+  .graphBot > div {
+    padding: 0 10px !important;
+  }
+}/*# sourceMappingURL=AddSalesPopup.module.css.map */

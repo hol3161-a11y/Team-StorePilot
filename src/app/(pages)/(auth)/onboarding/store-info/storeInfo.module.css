@@ -1,0 +1,299 @@
+.container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+  flex-direction: column;
+  max-width: 564px;
+  padding-top: 50px;
+}
+.container .backLink {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #B5B5B5;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+.container .steps {
+  display: flex;
+  list-style: none;
+  margin: 0 0 60px;
+  padding: 0;
+  gap: 12px;
+}
+.container .steps .step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.container .steps .step .stepLine {
+  height: 2px;
+  background: #515151;
+  border-radius: 1px;
+}
+.container .steps .step .stepLabel {
+  color: #515151;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container .steps .step.active .stepLine {
+  background: #76DE99;
+}
+.container .steps .step.active .stepLabel {
+  color: #76DE99;
+}
+.container .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+.container .heading h1 {
+  font-size: 54px;
+  font-weight: 700;
+  color: #E8E8E8;
+  margin: 0;
+}
+.container .heading span {
+  font-size: 16px;
+  color: #898F9A;
+}
+.container .storeInfoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .storeInfoForm .box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container .storeInfoForm .box .boxLabel {
+  font-size: 14px;
+  color: #B5B5B5;
+  font-weight: 600;
+}
+.container .storeInfoForm .box .boxText {
+  width: 100%;
+  height: 60px;
+  background: #1F2022;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  padding: 0 24px;
+  color: #E8E8E8;
+  font-size: 16px;
+  line-height: 1.2;
+  outline: none;
+}
+.container .storeInfoForm .box .boxText:focus {
+  border-color: #76DE99;
+}
+.container .storeInfoForm .box .boxText::-moz-placeholder {
+  color: #515151;
+}
+.container .storeInfoForm .box .boxText::placeholder {
+  color: #515151;
+}
+.container .storeInfoForm .box .boxTextError,
+.container .storeInfoForm .box .boxTextError:focus {
+  border-color: #E55C5C;
+}
+.container .storeInfoForm .box .industries {
+  display: flex;
+  gap: 12px;
+}
+.container .storeInfoForm .box .industries .industryCard {
+  flex: 1;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #1F2022;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0;
+}
+.container .storeInfoForm .box .industries .industryCard .industryIcon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: #898F9A;
+  -webkit-mask: var(--icon) no-repeat center/contain;
+  mask: var(--icon) no-repeat center/contain;
+}
+.container .storeInfoForm .box .industries .industryCard .industryLabel {
+  font-size: 14px;
+  color: #B5B5B5;
+  font-weight: 600;
+}
+.container .storeInfoForm .box .industries .industryCard.active {
+  background: rgba(118, 222, 153, 0.15);
+  border-color: rgba(118, 222, 153, 0.32);
+}
+.container .storeInfoForm .box .industries .industryCard.active .industryIcon {
+  background-color: #76DE99;
+}
+.container .storeInfoForm .box .industries .industryCard.active .industryLabel {
+  color: #76DE99;
+}
+.container .storeInfoForm .box .customIndustryWrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transform: translateY(-4px);
+  transition: max-height 0.3s ease, opacity 0.2s ease, margin-top 0.3s ease, transform 0.3s ease;
+}
+.container .storeInfoForm .box .customIndustryWrapper.open {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 12px;
+  transform: translateY(0);
+}
+.container .storeInfoForm .box .addressInput {
+  position: relative;
+}
+.container .storeInfoForm .box .addressInput .addressIcon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: #515151;
+  -webkit-mask: url(/img/icon/ic-location.svg) no-repeat center/contain;
+  mask: url(/img/icon/ic-location.svg) no-repeat center/contain;
+  pointer-events: none;
+}
+.container .storeInfoForm .box .addressInput .boxText {
+  padding-left: 46px;
+}
+.container .storeInfoForm .box .detailAddressWrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transform: translateY(-4px);
+  transition: max-height 0.3s ease, opacity 0.2s ease, margin-top 0.3s ease, transform 0.3s ease;
+}
+.container .storeInfoForm .box .detailAddressWrapper.open {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 12px;
+  transform: translateY(0);
+}
+.container .storeInfoForm .errorText {
+  color: #ff5b5b;
+  font-size: 14px;
+  margin: 0;
+}
+.container .storeInfoForm .nextBtn {
+  width: 100%;
+  height: 60px;
+  background: #76DE99;
+  border: none;
+  border-radius: 10px;
+  color: #17181B;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.container .storeInfoForm .nextBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.container .storeInfoForm .shake {
+  animation: shake 0.35s ease-in-out both;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(3px);
+  }
+}
+.container .addressInput {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.container .addressInput .boxText {
+  flex: 1;
+  cursor: pointer;
+}
+.container .addressInput .searchBtn {
+  padding: 14px 20px;
+  background: #76DE99;
+  color: #1F2022;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  height: 60px;
+}
+.container .addressInput .searchBtn:hover {
+  opacity: 0.9;
+}
+.container .postcodeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.container .postcodeModal {
+  background: #1F2022;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 600px;
+  overflow: hidden;
+}
+.container .postcodeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(179, 179, 179, 0.2);
+}
+.container .postcodeHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #E8E8E8;
+}
+.container .postcodeHeader button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #B5B5B5;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 1;
+}
+.container .postcodeHeader button:hover {
+  color: #E8E8E8;
+}/*# sourceMappingURL=storeInfo.module.css.map */

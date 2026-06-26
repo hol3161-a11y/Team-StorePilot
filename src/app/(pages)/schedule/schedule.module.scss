@@ -1,0 +1,437 @@
+/* ================== Layout ================== */
+.schedule {
+    margin: 100px auto;
+    width: 90%;
+    max-width: 1260px;
+}
+
+.container {
+    display: flex;
+    gap: 26px;
+}
+
+.scheduleMain {
+    flex: 1;
+    width: 60%;
+}
+
+
+
+
+
+/* ================== Header ================== */
+.scheduleHeader {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .scheduleTitle {
+        color: #76DE99;
+    }
+
+}
+
+.total {
+    display: flex;
+    align-items: flex-end;
+    color: #766F6F;
+    font-size: 1rem;
+    margin-top: 5px;
+
+    p {
+        padding-left: 5px;
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+
+
+/* ================== Panel ================== */
+.schedulePanel {
+    margin: 35px auto 0;
+    background-color: #1F2022;
+    border-radius: 11px;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+/* ================== Navigation ================== */
+.scheduleNav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #262729;
+    border-bottom: 1px solid #2D2C2F;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    padding: 20px 10px 6px;
+
+    b {
+        font-size: 1.7rem;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+
+}
+
+.scheduleNavArrow {
+    
+    .btnleft {
+        padding-right: 7px;
+        cursor: pointer;
+        padding-bottom: 5px;
+    }
+
+    .btnright{
+        padding-left: 7px;
+        cursor: pointer;
+        padding-bottom: 5px;
+    }
+}
+
+.scheduleNavDate {
+    img {
+        padding-right: 5px;
+    }
+}
+
+.scheduleNavDate {
+    display: flex;
+    align-items: center;
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+/* ================== Week ================== */
+.scheduleWeek {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid #2D2C2F;
+
+    p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        color: #aaa;
+        padding: 5px 10px;
+        border-radius: 100%;
+        transition: 0.2s;
+
+
+        &.active {
+            color: #000;
+            background-color: #76DE99;
+            font-weight: bold;
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+/* ================== Schedule List ================== */
+.scheduleList {
+    margin: 49px 35px 0;
+
+    height: 46vh;
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scheduleList::-webkit-scrollbar {
+    display: none;
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 0;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+/* ================== Day Header ================== */
+.scheduleDayHeader {
+    position: sticky;
+    top: 0; 
+    z-index: 10;
+    background-color: #1F2022;
+    padding-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        background-color: #202020;
+        border: 1px solid #2D2C2F;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.scheduleDay {
+    display: flex;
+    align-items: flex-end;
+
+    b {
+        font-size: 1.7rem;
+    }
+
+    p {
+        padding-left: 10px;
+        font-size: 1.2rem;
+        color: #aaa;
+    }
+}
+
+
+
+
+
+/* ================== max-width: 1400px ================== */
+@media (max-width: 1400px) {
+
+    .schedule {
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+
+
+
+    .scheduleNav {
+        padding: 20px 30px 5px;
+
+        b {
+            font-size: 25px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .scheduleWeek {
+        display: flex;
+        justify-content: space-around;
+        padding: 23px 20px;
+
+        p {
+            font-size: 25px;
+        }
+
+    }
+
+    .scheduleList {
+        margin: 50px 65px 10px;
+        height: 45vh;
+        overflow-y: auto;
+    }
+
+    .scheduleDay {
+        b {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .scheduleMain {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+
+
+/* ==================태블릿================== */
+@media (max-width: 1023px) {
+
+    .schedule {
+        margin: 70px auto;
+        width: 90%;
+    }
+
+    .scheduleHeader {
+        h2 {
+            font-size: 32px;
+        }
+
+        .scheduleTitle {
+            color: #76DE99;
+        }
+
+    }
+
+
+
+    .container {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+
+
+
+    .scheduleNav {
+        padding: 20px 30px 5px;
+
+        b {
+            font-size: 25px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .scheduleWeek {
+        display: flex;
+        justify-content: space-around;
+        padding: 23px 30px;
+
+        p {
+            font-size: 22px;
+        }
+
+    }
+
+    .scheduleList {
+        margin: 50px 50px 10px;
+        height: 47vh;
+        overflow-y: auto;
+    }
+
+    .scheduleDay {
+        b {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+/* ================== Mobile ================== */
+@media (max-width: 768px) {
+
+    .schedule {
+        margin: 70px auto;
+        width: 90%;
+    }
+
+    .scheduleHeader {
+        h2 {
+            font-size: 32px;
+        }
+
+        .scheduleTitle {
+            color: #76DE99;
+        }
+
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+    .scheduleNav {
+        padding: 20px 15px 5px;
+
+        b {
+            font-size: 1.5rem;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
+
+    .scheduleNavDate {
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .scheduleWeek {
+        padding: 20px 25px;
+
+        p {
+            font-size: 1.3rem;
+            padding: 5px 8px;
+        }
+    }
+
+    .scheduleList {
+        margin: 30px 40px 0;
+        height: 34vh;
+        overflow-y: auto;
+    }
+
+    .scheduleDay {
+        b {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .scheduleDayHeader {
+        padding-bottom: 20px;
+
+        img {
+            padding: 4px;
+        }
+    }
+}

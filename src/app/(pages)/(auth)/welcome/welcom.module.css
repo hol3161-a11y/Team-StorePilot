@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+  flex-direction: column;
+  max-width: 720px;
+}
+.container .check {
+  margin: 0 auto;
+  width: 160px;
+  height: 160px;
+  background-color: #76DE99;
+  border-radius: 50%;
+  position: relative;
+}
+.container .check::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #17181B;
+  -webkit-mask: url(/img/icon/ic-check.svg) no-repeat center/120px 120px;
+  mask: url(/img/icon/ic-check.svg) no-repeat center/120px 120px;
+}
+.container .completeText {
+  gap: 3px;
+}
+.container .completeText h1 {
+  font-size: 54px;
+}
+.container .completeText span {
+  font-size: 24px;
+}
+.container .completeText {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0;
+}
+.container .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+.container .divider .dividerLine {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: #515151;
+}
+.container .divider .dividerText {
+  font-size: 16px;
+  color: #515151;
+}
+.container .featureList {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.container .featureList .featureCard {
+  width: 218px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #1F2022;
+  border: 1px solid rgba(118, 222, 153, 0.32);
+  border-radius: 10px;
+  padding: 20px 30px;
+  gap: 10px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.container .featureList .featureCard img {
+  width: 38px;
+  height: 38px;
+  padding: 7px;
+  box-sizing: border-box;
+  background-color: rgba(82, 129, 97, 0.55);
+  border-radius: 7px;
+}
+.container .featureList .featureCard .inventoryIcon {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background-color: rgba(82, 129, 97, 0.55);
+  border-radius: 7px;
+  position: relative;
+}
+.container .featureList .featureCard .inventoryIcon::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  background-color: #76DE99;
+  -webkit-mask: url(/img/icon/inventory.svg) no-repeat center/contain;
+  mask: url(/img/icon/inventory.svg) no-repeat center/contain;
+}
+.container .actionGroup {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.container .primaryButton,
+.container .secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 60px;
+  background-color: #76DE99;
+  color: #17181B;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: inherit;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+}/*# sourceMappingURL=welcom.module.css.map */

@@ -1,0 +1,21 @@
+@mixin container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+}
+
+$background : #17181B;
+$point : #76DE99;
+$white : #E8E8E8;
+$grey1 : #B5B5B5;
+$grey2 : #898F9A;
+$grey3 : #515151;
+
+$box : #1F2022;
+$box-border : rgba(179, 179, 179, 0.2);
+
+$click-box : rgba(118,222,153,0.15);
+$click-border : rgba(118,222,153,0.32);

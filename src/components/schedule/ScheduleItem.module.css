@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* ================== Schedule Item ================== */
+.scheduleItem {
+  display: flex;
+  margin: 40px 0;
+}
+
+.card,
+.line,
+.scheduleItemContent,
+.scheduleItemGroup,
+.scheduleItemRow1,
+.scheduleItemRow2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ================== Checkbox ================== */
+.checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  aspect-ratio: 1/1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262729;
+  border: 1px solid #5A5B5C;
+  border-radius: 3px;
+  align-self: center;
+}
+.checkbox:checked {
+  background: url(/img/icon/ic-check.svg) no-repeat center/contain;
+  background-color: #85D575;
+  border: 1px solid #5A5B5C;
+  border-radius: 3px;
+}
+
+/* ================== Card ================== */
+.card {
+  background-color: #24272C;
+  width: 100%;
+  border-radius: 11px;
+  margin-left: 15px;
+}
+
+.line {
+  border-left: 3px solid #76DE99;
+  margin: 20px 0 20px 23px;
+}
+
+.scheduleItemContent {
+  padding: 12px 0 12px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ================== Grid ================== */
+.scheduleItemRow1,
+.scheduleItemRow2 {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px 1fr;
+  align-items: center;
+}
+
+/* ================== Typography ================== */
+.scheduleItemRow1 b,
+.scheduleItemRow2 b {
+  color: #aaa;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.scheduleItemRow1 span,
+.scheduleItemRow2 span {
+  font-size: 1rem;
+}
+
+.scheduleItemRow1 {
+  margin-bottom: 20px;
+}
+
+/* ================== Mobile ================== */
+@media (max-width: 768px) {
+  .scheduleItem {
+    margin: 20px 0;
+  }
+  .card {
+    margin-left: 10px;
+  }
+  .line {
+    margin-left: 15px;
+  }
+  .scheduleItemContent {
+    padding-left: 15px;
+  }
+  /* 🔥 grid 구조 변경 (핵심) */
+  .scheduleItemRow1,
+  .scheduleItemRow2 {
+    grid-template-columns: 70px 1fr;
+    row-gap: 8px;
+  }
+}/*# sourceMappingURL=ScheduleItem.module.css.map */

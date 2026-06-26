@@ -1,0 +1,383 @@
+@charset "UTF-8";
+.main {
+  width: 1260px;
+  margin: 0 auto;
+  font-family: "PyeojinGothic";
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main section {
+  width: 100%;
+  max-width: 866px;
+}
+.main section .chatTop > h1 {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+.main section .chatTop .inputWrap {
+  width: 100%;
+  height: 70px;
+  border-radius: 9px;
+  border: solid 1px #2D2C2F;
+  background-color: #1F2022;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 55px;
+}
+.main section .chatTop .inputWrap input {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.main section .chatTop .inputWrap button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.main section .chatTop .quickList {
+  display: flex;
+  flex-direction: column;
+  margin: 48px 0;
+}
+.main section .chatTop .quickList .bubble {
+  margin-left: 32px;
+  background: transparent;
+  border: 0;
+  color: #76DE99;
+  position: relative;
+  width: 310px;
+  height: 62px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.main section .chatTop .quickList .bubble:hover svg {
+  stroke: #76DE99;
+}
+.main section .chatTop .quickList .bubble:hover span {
+  font-weight: 400;
+}
+.main section .chatTop .quickList .bubble svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.main section .chatTop .quickList .bubble span {
+  position: relative;
+  z-index: 2;
+  color: #39e79f;
+  font-size: 15px;
+  line-height: 1;
+  pointer-events: none;
+  transform: translateY(-50%);
+  font-weight: 300;
+  font-size: 15px;
+}
+.main section .answerBox {
+  width: 100%;
+  height: 306px;
+  border-radius: 9px;
+  border: solid 1px #2D2C2F;
+  background-color: #1F2022;
+  padding-right: 6px;
+}
+.main section .answerBox .scrollBox {
+  overflow-y: scroll;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 57px 32px;
+}
+.main section .answerBox .scrollBox::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+.main section .answerBox .scrollBox::-webkit-scrollbar-track {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.main section .answerBox .scrollBox::-webkit-scrollbar-thumb {
+  background: #565656;
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+}
+.main section .answerBox .scrollBox::-webkit-scrollbar-button {
+  display: none;
+}
+.main section .answerBox .scrollBox::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.main section .answerBox .scrollBox .questionPreview {
+  margin-bottom: 4%;
+}
+.main section .answerBox .scrollBox .answerContent .dots::after {
+  content: "";
+  animation: dots 1.2s steps(3, end) infinite;
+}
+@keyframes dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+.main section .answerBox .scrollBox .answerContent pre {
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.main .summary {
+  width: 100%;
+  max-width: 266px;
+}
+.main .summary .summaryTitle {
+  margin-bottom: 20px;
+}
+.main .summary .summaryTitle a {
+  display: flex;
+  align-items: center;
+}
+.main .summary .summaryTitle a p {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+}
+.main .summary .summaryTitle a p .tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.main .summary .summaryTitle a > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .summary .summaryTitle:hover .tooltip {
+  opacity: 1;
+}
+.main .summary .summaryTitle:hover p {
+  color: #BABABA;
+}
+.main .summary .summaryTitle:hover svg {
+  color: #BABABA;
+}
+.main .summary .cardWrap {
+  display: grid;
+  gap: 40px;
+}
+.main .summary .summaryCard {
+  width: 100%;
+  height: auto;
+  background-color: #26272A;
+  border-radius: 9px;
+  padding: 41px 0;
+  min-height: 140px;
+  position: relative;
+}
+.main .summary .summaryCard .summaryInner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 24px;
+}
+.main .summary .summaryCard .summaryInner > p {
+  margin-right: 18px;
+}
+.main .summary .summaryCard .summaryInner .summaryText p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.main .summary .summaryCard .summaryInner .summaryText strong {
+  font-size: 26px;
+  font-weight: 700;
+}
+.main .summary .summaryCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #76DE99, #4CAF70);
+  border-radius: 12px 0 0 12px;
+  z-index: 10;
+}
+
+@media (max-width: 480px) {
+  /* 모바일 */
+  .main {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .main section {
+    width: 90% !important;
+  }
+  .main section .inner .chatTop > h1 {
+    font-size: 26px;
+  }
+  .main section .inner .chatTop .inputWrap {
+    height: 60px;
+  }
+  .main section .inner .chatTop .inputWrap > button {
+    width: 8%;
+  }
+  .main section .inner .chatTop .inputWrap > button > img {
+    width: 100%;
+  }
+  .main section .inner .chatTop .quickList {
+    margin: 22px 0;
+  }
+  .main section .inner .chatTop .quickList .bubble {
+    width: 260px;
+    margin-left: 14px;
+  }
+  .main section .inner .chatTop .quickList .bubble svg {
+    width: 100%;
+  }
+  .main section .inner .chatTop .quickList .bubble > span {
+    font-size: 13px;
+  }
+  .main section .answerBox {
+    height: 250px;
+  }
+  .main section .answerBox .scrollBox .answerContent > pre {
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .main .summary .cardWrap::-webkit-scrollbar {
+    display: none;
+  }
+  .main .summary .summaryCard {
+    scroll-snap-align: start;
+  }
+  .main .summary {
+    width: 90%;
+    max-width: 90%;
+    overflow: hidden;
+  }
+  .main .summary .summaryTitle a p {
+    font-size: 20px;
+  }
+  .main .summary .cardWrap {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .main .summary .cardWrap .summaryCard {
+    flex: 0 0 50%;
+    max-width: 50%;
+    scroll-snap-align: start;
+    min-height: auto;
+    padding: 20px 0;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner > p {
+    width: 19%;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner > p > img {
+    width: 100%;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner .summaryText > p {
+    font-size: 14px;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner .summaryText > strong {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 태블릿 */
+  .main {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    height: 100vh;
+    justify-content: center;
+  }
+  .main section {
+    width: 90% !important;
+  }
+  .main section .answerBox {
+    height: 250px;
+  }
+  .main .summary {
+    max-width: none;
+    width: 90%;
+  }
+  .main .summary .summaryTitle a p {
+    font-size: 20px;
+  }
+  .main .summary .cardWrap {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .main .summary .cardWrap .summaryCard {
+    max-width: 194px;
+    width: 100%;
+    padding: 20px 0;
+    height: 100%;
+    min-height: auto;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner > p {
+    width: 19%;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner > p > img {
+    width: 100%;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner .summaryText > p {
+    font-size: 14px;
+  }
+  .main .summary .cardWrap .summaryCard .summaryInner .summaryText > strong {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=main.module.css.map */

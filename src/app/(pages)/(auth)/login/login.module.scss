@@ -1,0 +1,336 @@
+@use '../../../../styles/variables' as *;
+
+.container {
+    padding-top: 100px;
+    width: 90%;
+    max-width: 564px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 70px;
+        gap: 10px;
+
+        .brandTitle {
+            font-family: 'KBLJump', sans-serif;
+            font-size: 67px;
+
+            .brandTitle1 {
+                color: $white
+            }
+
+            ;
+
+            .brandTitle2 {
+                color: $point
+            }
+
+            ;
+        }
+
+        .brandDescription {
+            font-size: 24px;
+            color: $white;
+        }
+    }
+
+
+    .loginForm {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+
+        .inputGroup {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .boxTitle {}
+
+                .boxText {
+                    width: 100%;
+                    height: 60px;
+                    background: $box;
+                    border: 1px solid $box-border;
+                    border-radius: 10px;
+                    padding: 0 24px;
+                    color: $white;
+                    font-size: 18px;
+                    line-height: 1.2;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $grey3;
+                    }
+                }
+
+                .passWord {
+                    position: relative;
+
+                    .boxText {
+                        padding-right: 56px;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        right: 24px;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .loginBtn {
+            width: 100%;
+            height: 60px;
+            background: $point;
+            border: none;
+            border-radius: 10px;
+            color: #000;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .divider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+        margin: 30px 0;
+
+        .dividerLine {
+            display: block;
+            flex: 1;
+            height: 1px;
+            background: $grey3;
+        }
+
+        .dividerText {
+            font-size: 16px;
+            color: $grey3;
+        }
+    }
+
+
+    .socialLoginBtn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 36px;
+
+        .google,
+        .naver {
+            img {
+                border-radius: 7px;
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .signupPrompt {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        gap: 6px;
+
+        .signupText {
+            color: $grey1;
+        }
+
+        .signupLink {
+            color: $point;
+        }
+    }
+
+    .errorText {
+        color: #ef4444;
+        font-size: 14px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: -40px;
+    }
+
+    @media (max-width: 1023px) {
+        padding-top: 80px;
+
+        .brand {
+            margin-bottom: 60px;
+
+            .brandTitle {
+                font-size: 54px;
+            }
+
+            .brandDescription {
+                font-size: 20px;
+            }
+        }
+
+        .loginForm {
+            .inputGroup {
+                gap: 40px;
+
+                .box .boxText {
+                    height: 56px;
+                    font-size: 17px;
+                }
+            }
+
+            .loginBtn {
+                height: 56px;
+            }
+        }
+
+        .divider {
+            margin: 24px 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 60px;
+
+        .brand {
+            margin-bottom: 40px;
+
+            .brandTitle {
+                font-size: 40px;
+            }
+
+            .brandDescription {
+                font-size: 16px;
+            }
+        }
+
+        .loginForm {
+            gap: 24px;
+
+            .inputGroup {
+                gap: 30px;
+
+                .box .boxText {
+                    height: 50px;
+                    font-size: 15px;
+                    padding: 0 18px;
+                }
+            }
+
+            .loginBtn {
+                height: 50px;
+                font-size: 15px;
+            }
+        }
+
+        .divider {
+            margin: 20px 0;
+            gap: 20px;
+
+            .dividerText {
+                font-size: 14px;
+            }
+        }
+
+        .signupPrompt {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 50px;
+
+        .brand {
+            margin-bottom: 44px;
+            gap: 8px;
+
+            .brandTitle {
+                font-size: 30px;
+            }
+
+            .brandDescription {
+                font-size: 14px;
+            }
+        }
+
+        .loginForm {
+            gap: 28px;
+
+            .inputGroup {
+                gap: 30px;
+
+                .box .boxText {
+                    height: 46px;
+                    font-size: 14px;
+                }
+            }
+
+            .loginBtn {
+                height: 46px;
+                font-size: 14px;
+            }
+        }
+
+        .divider {
+            margin: 28px 0;
+        }
+
+        .socialLoginBtn {
+            margin-bottom: 32px;
+            flex-direction: column;
+        }
+    }
+}
+
+.testAccount {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #17181B;
+    border: 1px solid #76DE99;
+    border-radius: 15px;
+    padding: 15px;
+
+    &.off {
+        display: none;
+    }
+
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        padding-bottom: 10px;
+
+        >button {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+
+    >p {
+        color: #bdbdbd;
+    }
+}

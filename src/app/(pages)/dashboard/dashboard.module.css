@@ -1,0 +1,273 @@
+.dashboard {
+  width: 1260px;
+  margin: 0 auto;
+  font-family: "PyeojinGothic";
+}
+.dashboard .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 73px;
+  position: relative;
+}
+.dashboard .inner .backBtn {
+  position: absolute;
+  right: 0;
+  top: 30;
+}
+.dashboard .inner .top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.dashboard .inner .top > h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.dashboard .inner .top .dateWrap > p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.dashboard .inner .cardWrap {
+  display: flex;
+  gap: 5%;
+}
+.dashboard .inner .cardWrap .summaryCard {
+  width: 100%;
+  height: auto;
+  background-color: #26272A;
+  border-radius: 9px;
+  padding: 46px 0;
+  position: relative;
+  min-height: 140px;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+.dashboard .inner .cardWrap .summaryCard .summaryInner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dashboard .inner .cardWrap .summaryCard .summaryInner > p {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.dashboard .inner .cardWrap .summaryCard .summaryInner .summaryText {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.dashboard .inner .cardWrap .summaryCard .summaryInner .summaryText p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.dashboard .inner .cardWrap .summaryCard .summaryInner .summaryText strong {
+  font-size: 28px;
+  font-weight: 700;
+}
+.dashboard .inner .cardWrap .summaryCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #76DE99);
+  border-radius: 12px 0 0 12px;
+  z-index: 10;
+}
+.dashboard .inner .cardWrap .summaryCard.caution::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #FFBD07);
+  border-radius: 12px 0 0 12px;
+  z-index: 10;
+}
+.dashboard .inner .cardWrap .summaryCard.danger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #F34C4C);
+  border-radius: 12px 0 0 12px;
+  z-index: 10;
+}
+.dashboard .inner .chartSection > h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.dashboard .inner .infoList {
+  display: flex;
+  gap: 60px;
+}
+.dashboard .inner .infoList .infoCard {
+  border: 1px solid transparent;
+  width: 100%;
+  background-color: #26272A;
+  border-radius: 11px;
+  transition: 0.2s;
+}
+.dashboard .inner .infoList .infoCard .cardTitle {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 34px;
+  justify-content: space-between;
+}
+.dashboard .inner .infoList .infoCard .cardTitle > h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.dashboard .inner .infoList .infoCard ul {
+  padding-left: 38px;
+  padding-bottom: 52px;
+  padding-top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.dashboard .inner .infoList .infoCard li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.dashboard .inner .infoList .infoCard li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #76DE99;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+.dashboard .inner .aiBox {
+  background-color: #26272A;
+  border-radius: 11px;
+  margin-bottom: 100px;
+  width: 100%;
+  transition: 0.2s;
+}
+.dashboard .inner .aiBox .aiTitle {
+  display: flex;
+  align-items: center;
+  padding-left: 29px;
+  padding-top: 48px;
+}
+.dashboard .inner .aiBox .aiTitle > h2 {
+  font-size: 24px;
+  margin-left: 14px;
+}
+.dashboard .inner .aiBox .aiContent {
+  padding-bottom: 48px;
+  padding-left: 46px;
+  margin-top: 38px;
+}
+.dashboard .inner .aiBox .aiContent p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.dashboard .inner .summaryCard:hover,
+.dashboard .inner .infoCard:hover {
+  border: 1px solid #76DE99;
+}
+.dashboard .inner .summaryCard.caution:hover {
+  border: 1px solid #FFBD07;
+}
+.dashboard .inner .summaryCard.danger:hover {
+  border: 1px solid #F34C4C;
+}
+.dashboard .inner .aiBox:hover {
+  background: #232426;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard {
+    width: 90%;
+  }
+  .dashboard .inner .cardWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .dashboard .inner .cardWrap .summaryCard {
+    width: 100%;
+    height: 140px;
+    padding: 32px 0;
+  }
+  .dashboard .inner .cardWrap .summaryCard .summaryInner {
+    height: 100%;
+  }
+  .dashboard .inner .cardWrap .summaryCard .summaryInner .summaryText {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .dashboard .inner .cardWrap .summaryCard .summaryInner .summaryText strong {
+    font-size: 22px;
+  }
+  .dashboard .inner .backBtn {
+    top: 14px;
+  }
+  .dashboard .inner .infoList {
+    gap: 30px;
+  }
+  .dashboard .inner .infoList .infoCard .cardTitle > h3 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 480px) {
+  .dashboard {
+    width: 90%;
+  }
+  .dashboard .inner .top {
+    margin-top: 70px;
+  }
+  .dashboard .inner .top > h1 {
+    font-size: 30px;
+  }
+  .dashboard .inner .top .dateWrap > p {
+    font-size: 16px;
+  }
+  .dashboard .inner .backBtn {
+    top: 14px;
+  }
+  .dashboard .inner .cardWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .dashboard .inner .cardWrap .summaryCard {
+    width: 100%;
+    height: 140px;
+    padding: 32px 0;
+  }
+  .dashboard .inner .cardWrap .summaryCard .summaryInner {
+    height: 100%;
+  }
+  .dashboard .inner .cardWrap .summaryCard .summaryInner .summaryText {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .dashboard .inner .cardWrap .summaryCard .summaryInner .summaryText strong {
+    font-size: 18px;
+  }
+  .dashboard .inner .infoList {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .dashboard .inner .infoList .infoCard .cardTitle > h3 {
+    font-size: 17px;
+  }
+  .dashboard .inner .aiBox .aiTitle > h2 {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=dashboard.module.css.map */

@@ -1,0 +1,79 @@
+/* ------ font ------ */
+
+/* PyeojinGothic */
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('/font/PyeojinGothic-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('/font/PyeojinGothic-Extrabold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('/font/PyeojinGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('/font/PyeojinGothic-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('/font/PyeojinGothic-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('/font/PyeojinGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('/font/PyeojinGothic-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* KBLJump */
+
+@font-face {
+    font-family: 'KBLJump';
+    src: url('/font/KBLJump_EB_Extended.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* 모바일 사이드바 열때 */
+
+
+@media (max-width: 1023px) {
+    body.menu-open {
+        overflow: hidden;
+        height: 100vh;
+        touch-action: none;
+    }
+
+}
+
+body {
+    overflow-x: hidden;
+}

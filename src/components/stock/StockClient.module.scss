@@ -1,0 +1,454 @@
+.stock {
+    width: 1260px;
+    margin: 100px auto;
+
+    h1 {
+        font-size: 40px;
+        color: #e8e8e8;
+        padding-bottom: 40px;
+
+        >span {
+            color: #76DE99;
+        }
+    }
+
+    .graphTop {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 15px;
+
+        .searchAndTab {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .searchBar {
+                width: 265px;
+                height: 33px;
+                background-color: #262729;
+                border: 1px solid #76DE99;
+                border-radius: 99999px;
+                padding: 0 10px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                >button {
+                    width: fit-content;
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    padding: 0;
+                    cursor: pointer;
+                }
+
+                >input {
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    color: #e8e8e8;
+                }
+            }
+
+            .filterTab {
+                display: flex;
+                gap: 10px;
+
+                p {
+                    white-space: nowrap;
+                    flex-shrink: 0;
+                    height: 33px;
+                    background-color: rgba($color: #5E5E5E, $alpha: 0.21);
+                    border: 1px solid rgba($color: #868686, $alpha: 0.46);
+                    border-radius: 9999;
+                    color: white;
+                    padding: 0 15px;
+                    font-size: 16px;
+                    line-height: 33px;
+                    cursor: pointer;
+
+                    &.active {
+                        background-color: rgba($color: #98FFAE, $alpha: 0.26);
+                        border: 1px solid #76DE99;
+                        font-weight: bold;
+
+                        &:hover {
+                            background-color: rgba($color: #98FFAE, $alpha: 0.26);
+                            cursor: default;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgba($color: #5E5E5E, $alpha: 0.5);
+                    }
+                }
+            }
+
+        }
+
+        .btns {
+            display: flex;
+            gap: 10px;
+
+            >p {
+                aspect-ratio: 1;
+                cursor: pointer;
+                background-color: #76de99;
+                border-radius: 8px;
+                justify-content: center;
+                align-items: center;
+                width: 33px;
+                display: flex;
+            }
+        }
+    }
+
+    .graph {
+        height: 416px;
+        background-color: #1F2022;
+        border-radius: 11px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .text {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+
+            >div {
+                width: 100%;
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .titleLine {
+            padding: 0 120px 0 40px;
+            background-color: #262729;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            font-weight: bold;
+
+            .sortTab {
+                cursor: pointer;
+
+                >p {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .lines {
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #565656;
+                border-radius: 999px;
+                border: 2px solid transparent;
+                background-clip: padding-box;
+
+                &:hover {
+                    background: #76DE99;
+                    border: 2px solid transparent;
+                    background-clip: padding-box;
+                }
+            }
+        }
+
+        .oneline {
+            height: 60px;
+            padding: 0 40px;
+            border-bottom: 1px solid #2D2C2F;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            .editBtn {
+                width: 30px;
+                height: 30px;
+                aspect-ratio: 1/1;
+                border-radius: 999px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            &:hover {
+                background-color: #262729;
+                border-radius: 10px;
+            }
+
+            .text {
+                >div {
+                    flex: 1;
+
+                    .green {
+                        color: #4CFF17;
+                        background-color: rgba($color: #85D575, $alpha: 0.26);
+                        border: 0.26px solid rgba($color: #87FF69, $alpha: 0.26);
+                        border-radius: 9999;
+                        padding: 5px 10px;
+                    }
+                    .yellow {
+                        color: #FFBD07;
+                        background-color: rgba($color: #FFBD07, $alpha: 0.09);
+                        border: 0.26px solid rgba($color: #C28E00, $alpha: 0.26);
+                        border-radius: 9999;
+                        padding: 5px 10px;
+                    }
+                    .red {
+                        color: #F34C4C;
+                        background-color: rgba($color: #F34C4C, $alpha: 0.16);
+                        border: 0.26px solid rgba($color: #F34C4C, $alpha: 0.26);
+                        border-radius: 9999;
+                        padding: 5px 10px;
+                    }
+
+                    &.greenDate {
+                        color: #4CFF17;
+                    }
+                    &.yellowDate {
+                        color: #FFBD07;
+                    }
+                    &.redDate {
+                        color: #F34C4C;
+                    }
+
+                    &.name {
+                        display: flex;
+                        align-items: center;
+                        
+
+                        .greenDot {
+                            width: 5px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .checkbox {
+            appearance: none;
+            cursor: pointer;
+            width: 13px;
+            height: 13px;
+            aspect-ratio: 1/1;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #262729;
+            border: 1px solid #5A5B5C;
+            border-radius: 3px;
+
+            &:checked {
+                background: url(/img/icon/ic-check.svg) no-repeat center / contain;
+                background-color: #85D575;
+                border: 1px solid #5A5B5C;
+                border-radius: 3px;
+            }
+        }
+
+        .checkboxNone {
+            background-color: transparent;
+            border: none;
+            width: 13px;
+            height: 13px;
+            aspect-ratio: 1/1;
+        }
+
+        .inputLine {
+            height: 60px;
+            padding: 0 40px 0 93px;
+            border-bottom: 1px solid #2D2C2F;
+            display: flex;
+            align-items: center;
+
+            .text {
+                width: 100%;
+                display: flex;
+                gap: 40px;
+
+                >div {
+                    align-items: center;
+                    gap: 20px;
+
+                    >div {
+                        flex: 1;
+                        min-width: 0;
+                        display: flex;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    color: #e8e8e8;
+                    height: 35px;
+                    background-color: transparent;
+                    box-shadow: none;
+                    border: 1px solid rgba(137, 143, 154, 0.24);
+                    border-radius: 5px;
+                    padding: 0 8px;
+                    margin: 0;
+                    appearance: none;
+                    /* 브라우저 기본 스타일 제거 */
+                    -webkit-appearance: none;
+
+                    &:focus {
+                        outline: none;
+                        border: 1px solid #76DE99;
+                        color: #e8e8e8;
+                    }
+
+                    &::placeholder {
+                        color: #888888;
+                    }
+                }
+
+                .period {
+                    display: flex;
+                    gap: 10px;
+                    flex: 1;
+                    z-index: 5;
+
+                    .periodItem {
+                        position: relative;
+                        width: 100%;
+                    }
+
+                    .periodBtn {
+                        width: 100%;
+                        height: 35px;
+                        padding: 0 8px;
+                        background: #191A1C;
+                        border: 1px solid rgba(179, 179, 179, 0.2);
+                        font-size: 14px;
+                        color: #e8e8e8;
+                        cursor: pointer;
+                        padding: 5px;
+                        border-radius: 7px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        &:hover,
+                        &.periodBtnOpen {
+                            color: #fff;
+                            border: 1px solid #76DE99;
+                        }
+
+                        &.periodBtnDisabled {
+                            opacity: 0.3;
+                            cursor: not-allowed; // 비활성화시 커서 변경
+
+                            &:hover {
+                                color: #e8e8e8;
+                                border: 1px solid rgba(179, 179, 179, 0.2);
+                            }
+                        }
+
+                        >p {
+                            width: 13px;
+
+                            >img {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .dropdown {
+                        position: absolute;
+                        top: calc(100% + 6px);
+                        left: 0;
+                        background-color: #1F2022;
+                        border: 1px solid rgba(118, 222, 153, 0.32);
+                        border-radius: 10px;
+                        padding: 4px;
+                        list-style: none;
+                        // z-index: 100;
+                        max-height: 200px;
+                        overflow-y: auto;
+                        width: 100%;
+
+                        &::-webkit-scrollbar {
+                            width: 10px;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: transparent;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: #565656;
+                            border-radius: 999px;
+                            border: 2px solid transparent;
+                            background-clip: padding-box;
+
+                            &:hover {
+                                background: #76DE99;
+                                border: 2px solid transparent;
+                                background-clip: padding-box;
+                            }
+                        }
+
+                        >li {
+                            padding: 6px;
+                            font-size: 14px;
+                            color: #e8e8e8;
+                            border-radius: 7px;
+                            cursor: pointer;
+                            white-space: nowrap;
+                            transition: 0.3s;
+
+                            &:hover {
+                                background-color: #2D2C2F;
+                                padding-left: 8px;
+                            }
+
+                            &.dropdownActive {
+                                color: #76DE99;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .addBtn {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    width: 30px;
+                    height: 30px;
+                    aspect-ratio: 1/1;
+                    border-radius: 999px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #262729;
+                    }
+                }
+            }
+        }
+    }
+}
